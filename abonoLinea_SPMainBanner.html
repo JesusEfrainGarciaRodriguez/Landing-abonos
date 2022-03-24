@@ -1,0 +1,2128 @@
+<style>
+  body {
+    background-color: #edeef2 !important;
+    -webkit-font-smoothing: antialiased;
+  }
+  div#header {
+    display: none;
+  }
+  div#footerWrapper {
+    display: none;
+  }
+  .rowContainer {
+    padding: 0;
+  }
+  .cuerpo,
+  .cuerpoDos,
+  .cuerpoTres {
+    margin-bottom: 0px;
+  }
+  .card-link-format {
+    border: none;
+    text-decoration: underline !important;
+    margin: 0;
+    display: inline;
+    font-size: 16px !important;
+    line-height: 24px;
+    color: #006fb9 !important;
+    font-family: "Roboto-bold";
+  }
+  .card-subtext-format {
+    color: #5f5f5f !important;
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .card {
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  }
+  .doublecard .card:nth-of-type(1) {
+    margin-bottom: 16px;
+  }
+
+  .doublecard .list-formating li:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  .card-link-inactive {
+    line-height: 46px !important;
+    border: 2px solid !important;
+    color: #006fb9 !important;
+    font-size: 16px !important;
+    font-weight: bold;
+    border-color: #006fb9 !important;
+    height: 48px !important;
+    transition: background-color 0.15s;
+  }
+
+  .header.rellax {
+    background-color: #fff;
+    color: #fff;
+    left: 50%;
+    margin-left: -50vw;
+    padding: 25px 0;
+    position: relative;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+
+  .header.rellax {
+    display: grid;
+    position: initial;
+    width: 100%;
+    margin: 0px;
+    padding: 17px 16px;
+  }
+  .grid-item {
+    margin: 0px;
+  }
+  .header .logo-coppel {
+    width: auto;
+    height: 21px;
+  }
+  .header .pull-right {
+    margin: 0px;
+    font-size: 14px;
+    color: #016db6;
+    line-height: 21px;
+    text-decoration: underline;
+  }
+
+  .principal {
+    background-color: #006fb9;
+    color: #fff;
+    left: 50%;
+    margin-bottom: 30px;
+    margin-left: -50vw;
+    padding: 25px 0;
+    position: relative;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+
+  .principal {
+    padding: 24px 8px 16px 8px;
+    position: initial;
+    display: block;
+    margin: 0px;
+    width: 100%;
+    float: left;
+    border-radius: 0px 0px 8px 8px;
+  }
+  .tituloTexto {
+    line-height: 48px;
+    font-size: 40px;
+    font-family: "Circular,Roboto", sans-serif;
+    text-align: center;
+    padding: 0 15px;
+    margin: 0.67em 0;
+    margin-top: 20px;
+    color: white;
+    letter-spacing: 0px;
+  }
+  .card.noMobile {
+    padding: 0px;
+    box-shadow: 0px 2px 4px 0px;
+    position: relative;
+  }
+  .cuerpoDos .card.noMobile {
+    box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 8%);
+    margin: 0px;
+    padding: 14px 14px 24px 14px;
+  }
+
+  .subContenedor {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.12px;
+    font-family: "Roboto";
+    margin-bottom: 24px;
+    padding: 0px;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+  }
+  .cuerpoCoppel .card,
+  .cuerpo .card {
+    border-top: 6px solid #fddd2e;
+  }
+  .picture img {
+    width: 100%;
+    height: auto;
+    padding: 0px 8px;
+    max-width: 393px;
+  }
+  .picture {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .cuerpo {
+    display: grid;
+    float: left;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin-bottom: 0px;
+  }
+
+  .subTituloCuerpo {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 18px 0px 12px 0px;
+    padding: 0px 8px;
+    display: inline-block;
+    width: 100%;
+  }
+  .subTituloCuerpo h2 {
+    color: #212222 !important;
+    font-size: 22px !important;
+    line-height: 30px !important;
+    margin: 0px;
+  }
+  .card.accordion {
+    padding: 0;
+    margin: 0px 8px;
+  }
+  .cuerpoDos .card h3 {
+    text-align: center;
+    color: #005491;
+    margin-top: 0px;
+    font-size: 18px;
+    letter-spacing: 0.12px;
+    line-height: 23px;
+    font-weight: 500;
+    padding: 0px 14px;
+    margin-bottom: 16px;
+  }
+  .border-img {
+    border: 1px solid #9696964d;
+  }
+  .ajustt {
+    height: 170px;
+  }
+  .card.noMobile .imagenSinFondo .ajustt {
+    width: 163px;
+    height: 163px;
+    border: none;
+  }
+  .cuerpoDos article .list-formating {
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+
+  .card.relatelement.lasttcard li {
+    padding: 0px 20px 0px 24px;
+  }
+  .cuerpoDos .accordion .list-formating li:last-of-type {
+    margin-bottom: 0px;
+  }
+  .cuerpoDos article {
+    border-bottom: 1px solid #edeef2;
+  }
+  .cuerpoDos article.lastt {
+    border-bottom: 1px solid #edeef2;
+    border-radius: 8px;
+  }
+
+  .noMargingBottom {
+    margin-bottom: 0px !important;
+  }
+
+  li svg#Capa_1 {
+    width: 21px;
+    margin-right: 7px;
+    vertical-align: middle;
+  }
+
+  .card h3 {
+    text-align: center;
+    color: #005491;
+    margin-top: 18px;
+    font-size: 18px;
+  }
+  /*.cuerpoDos .card-height-format{
+      padding: 0px 6px;
+    }*/
+  .cuerpoDos .imagenSinFondoDos img {
+    width: 100%;
+    border: 1px solid #9696964d;
+    padding: 14px;
+    border-radius: 4px;
+    height: 84px;
+  }
+  .cuerpoDos .sinfondo_small {
+    padding: 0px;
+    height: 84px;
+    border: none;
+  }
+  .cuerpoDos .list-formating,
+  .cuerpo .list-formating {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .cuerpoDos .cont-ac1 .list-formating li {
+    padding: 0px 16px 0px 33px;
+  }
+
+  .cuerpoDos .accordion .list-formating li {
+    padding: 0px 0px 0px 24px;
+  }
+
+  .cuerpoDos .list-formating li,
+  .cuerpo .list-formating li {
+    color: rgb(17, 17, 17);
+    font-family: Roboto;
+    letter-spacing: 0px;
+    margin-bottom: 14px;
+    padding: 0px 21px 0px 25px;
+    position: relative;
+  }
+
+  .cuerpo .list-formating li {
+    margin-bottom: 16px;
+  }
+
+  .cuerpo .list-formating li {
+    padding: 0px 9px 0px 24px;
+  }
+  .cuerpo .card.esspecial .list-formating li {
+    padding: 0px 21px 0px 25px;
+  }
+
+  .cuerpo .texto_links_descarga {
+    font-size: 14px;
+    font-family: "Roboto";
+    margin-bottom: 12px;
+    color: rgb(33, 34, 34);
+    line-height: 16px;
+  }
+
+  .cuerpoDos .card-full-message {
+    font-family: "Roboto";
+    letter-spacing: 0.5px;
+    margin-top: 24px;
+    color: #212121;
+  }
+  .cuerpoDos .doublecard .card {
+    min-height: 340px;
+  }
+
+  .cuerpoDos .list-formating li::before,
+  .cuerpo .list-formating li::before {
+    color: rgb(0, 114, 190);
+    font-family: Roboto-Bold;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.15px;
+    position: absolute;
+    left: 0px;
+    line-height: 21px;
+    margin: 0px;
+    top: 2px;
+  }
+
+  .cuerpoDos .card .boton-whats {
+    margin: 119px 0px 0px 0px;
+    border-radius: 10px;
+    letter-spacing: 0.14px;
+  }
+  .cuerpo .card .boton-whats {
+    letter-spacing: 0.14px;
+    margin: 24px auto 0px auto;
+    max-width: 300px;
+  }
+  .cuerpo .card-link-active {
+    background: rgb(0, 111, 185);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.12px;
+    text-align: center;
+    height: 48px;
+    width: 100%;
+    padding: 14px 30.5px 13px 30.5px;
+    line-height: 21px;
+    position: relative;
+    margin: 0px auto 26px auto;
+    max-width: 350px;
+  }
+
+  .cuerpo .card-link-active .fa-chevron-right:before {
+    content: "\f054";
+    width: 6px;
+    height: 10px;
+    line-height: 21px;
+    position: absolute;
+    right: 21px;
+    top: 15px;
+    font-size: 10px;
+  }
+
+  .cuerpoDos .ac-small .boton-whats {
+    position: initial;
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+    max-width: 270px;
+    margin: 0px;
+  }
+  .cuerpoDos .ac-container label {
+    line-height: 23px;
+    padding: 18px 13px 18px 15px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Circular";
+    height: auto;
+    margin-bottom: 0px;
+    border-bottom: none;
+  }
+
+  .cuerpoDos .ac-container {
+    padding: 0px 8px;
+  }
+
+  .cuerpoDos .ac-container label::after {
+    float: right;
+    margin-right: 0px;
+    position: initial;
+    width: 10px;
+  }
+  .cuerpoDos .ac-container input.checcked + label {
+    color: #005491;
+    border-bottom: none;
+    padding: 18px 11px 28px 15px;
+  }
+
+  .ac-container .ac-large {
+    /* padding-bottom: 32px; */
+  }
+
+  .card.accordion.openborder {
+    border-top: 6px solid #fddd2e;
+  }
+
+  .cuerpo .card {
+    padding: 24px 16px;
+    margin: 0px 8px 8px 8px;
+  }
+
+  .cuerpo .card.esspecial {
+    padding: 18px 16px 24px 16px;
+  }
+
+  .cuerpo .card h3 {
+    color: rgb(0, 84, 145);
+    font-family: "Circular";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0.12px;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .cuerpoDos .ac-container label.firstt {
+    border-radius: 8px;
+  }
+  .cuerpoDos .card.accordion.openborder .ac-container label.firstt {
+    padding-top: 12px !important;
+  }
+  .cuerpoDos .card-subtext-format,
+  .cuerpo .card-subtext-format {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+
+  .cuerpoDos .imagenSinFondo.cnt_img_card {
+    margin-bottom: 18px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+  }
+
+  .cuerpoDos .imagenSinFondo.cnt_img_card .oxxo_img {
+    width: 170px;
+  }
+  .relatelement {
+    position: relative !important;
+  }
+  .cuerpo .card.lasttcard {
+    margin-bottom: 0px;
+  }
+  .card-height-format-coppel {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  .card-height-format {
+    min-height: auto;
+  }
+  .list-formating {
+    list-style: none;
+    counter-reset: li;
+  }
+  .list-formating-coppel {
+    list-style: none;
+    counter-reset: li 3;
+  }
+  .list-formating-coppel li {
+    counter-increment: li;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #111;
+    line-height: 24px;
+  }
+  .list-formating-coppel li::before {
+    content: counter(li);
+    color: #0072be;
+    display: inline-block;
+    font-size: 18px;
+    width: 1em;
+    margin-left: -1em;
+    font-weight: 600;
+  }
+  .list-formating-coppel div {
+    margin-left: 6px;
+    width: 99%;
+  }
+  .cuerpo .list-formating li.extended_mrg {
+    margin-bottom: 24px;
+  }
+  .doublecard .card.noMobile {
+    margin: 16px 0px 0px 0px;
+  }
+
+  .double_link_container {
+    margin-bottom: 17px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .double_link_container .card-download-link {
+    max-width: 150px;
+    display: inline-block;
+    float: left;
+    text-align: left;
+    margin-right: 9px;
+  }
+  .double_link_container .card-download-link.lastt_lnk {
+    margin-right: 0px;
+    text-align: right;
+  }
+
+  .double_link_container .card-download-link img {
+    width: 100%;
+  }
+
+  .card-content-aligner.identity2 img {
+    display: inline-block;
+    margin: 0px;
+    width: 150px;
+  }
+
+  .doublecard .card:first-of-type {
+    margin: 0px;
+  }
+  .list-formating li {
+    counter-increment: li;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #111;
+    line-height: 24px;
+  }
+  .list-formating li::before {
+    content: counter(li);
+    color: #0072be;
+    display: inline-block;
+    font-size: 18px;
+    width: 1em;
+    margin-left: -1em;
+    font-weight: 600;
+  }
+  .card-link-active {
+    height: 48px;
+    display: block;
+    color: white;
+    line-height: 48px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #016db6;
+    border-radius: 10px;
+    width: max-content;
+    margin: 0 auto;
+    padding: 0px 8px;
+  }
+  .card-link-active i {
+    margin-top: 15px;
+    margin-right: 0px;
+  }
+  .card-link-active:hover {
+    background-color: #1c5c95;
+    color: white;
+    text-decoration: none;
+  }
+  .card-content-aligner.card-link-margin {
+    border: none;
+    text-decoration: underline;
+    margin: 15px 15px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006fb9;
+    text-align: center;
+  }
+  .cuerpo .card-content-aligner.card-link-margin {
+    margin: 0px;
+    height: 21px;
+    line-height: 21px;
+  }
+  .card-content-aligner {
+    text-align: center;
+  }
+
+  .boton-whats {
+    margin: 10px;
+    height: 48px;
+    display: block;
+    border: 2px #006fb9 solid;
+    line-height: 44px;
+    font-size: 16px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .boton-whats:hover {
+    background-color: #006fb9;
+    color: #fff !important;
+    text-decoration: none;
+  }
+  .beneficios .card-link-format:hover {
+    text-decoration: none !important;
+  }
+  .card-go-start {
+    height: 50px;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+    width: 102vw;
+    display: flex;
+    align-items: center;
+    margin-left: 48%;
+    left: -50vw;
+    background-color: #1f3545;
+  }
+  .card-go-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .tituloTextoSecundario {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.12px;
+    font-family: "Roboto";
+    margin-bottom: 24px;
+    padding: 0px;
+    color: white;
+  }
+
+  .card-go-content span {
+    color: #fff;
+  }
+  .card-go-start a {
+    color: #fff;
+    line-height: 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .card-go-content i {
+    margin-left: 10px;
+  }
+  .noMobileb {
+    display: none;
+  }
+  .ac-container label {
+    height: 50px;
+    font-size: 18px;
+    line-height: 33px;
+    padding: 5px 20px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    cursor: pointer;
+    color: #111;
+    border-bottom: 1px solid #edeef2;
+    border-width: 1px;
+  }
+  .ac-container {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  .ac-container label::after {
+    content: "+";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 13px;
+    top: 7px;
+    color: #005491;
+  }
+  .ac-container input.checcked + label::after {
+    content: "-";
+  }
+  .cuerpoDos .ac-container input.checcked + label::after {
+    margin-right: -2.5px;
+  }
+  .ac-container input {
+    display: none;
+  }
+  .ac-container article {
+    background: #fff;
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    z-index: 10;
+  }
+  .footer p {
+    color: #fff;
+    margin: 0px;
+  }
+  .ac-container article p {
+    font-style: normal;
+    color: #111;
+    line-height: 23px;
+    font-size: 10px;
+    padding: 20px;
+  }
+
+  .cuerpoDos article .card-full-message {
+    font-family: "Roboto";
+    letter-spacing: 0.5px;
+    margin: 16px 0px 0px 0px;
+    color: #212121;
+    padding: 0px;
+    font-size: 16px;
+  }
+
+  .ac-container article {
+    padding: 0px;
+  }
+
+  .ac-container input.checcked ~ article {
+    padding: 0px 8px 32px 8px;
+  }
+  .ac-container .cont-ac1 input.checcked ~ article {
+    padding: 0px 16px 32px 9px;
+  }
+
+  .cuerpoDos .imagenSinFondo.cnt_img_card {
+    margin-bottom: 18px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+  }
+
+  .ac-container input.checcked ~ article.ac-small {
+    padding-bottom: 32px;
+  }
+  .ac-container input.checcked ~ article.ac-small {
+    height: auto;
+  }
+  .ac-container input.checcked ~ article.ac-medium {
+    height: auto;
+  }
+  .ac-container input.checcked ~ article.ac-large {
+    height: auto;
+  }
+  .logosBeneficios {
+    float: left;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .tMargin.primero.card-beneficios-subpadding-fix {
+    width: 100%;
+    justify-content: center;
+  }
+  .card-beneficios-text-width {
+    max-width: 220px;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #111;
+  }
+
+  .tituloTexto {
+    line-height: 48px;
+    font-size: 30px;
+    font-family: "Circular";
+    padding: 0px;
+    margin: 0px 0px 18px 0px;
+  }
+
+  .imagenSinFondo {
+    border: 1px solid #9696964d;
+    height: 170px;
+    text-align: center;
+    padding: 35px 0;
+  }
+
+  .cnt_img_card {
+    margin-bottom: 18px;
+  }
+
+  .contenidoFooter {
+    background: #192c39;
+    padding: 0px;
+  }
+  .cnt_img_card {
+    margin-bottom: 18px;
+  }
+  .doublecard .cnt_img_card {
+    margin-bottom: 14px;
+  }
+  .footer {
+    background: rgb(0 37 61);
+    color: #fff;
+    clear: both;
+    font-size: 14px;
+    text-align: center;
+    padding: 16px 28px 24px 28px;
+  }
+  .footer ul {
+    margin: 0 0 24px;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+  .footer ul li {
+    width: 100%;
+    list-style: none;
+    margin: 0px 0px 12px 0px;
+    padding: 0px;
+  }
+  .footer ul li:last-of-type {
+    margin-bottom: 0px;
+  }
+  .footer li a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .contenedorBeneficios {
+    display: flex;
+  }
+  .cuerpoTres .card {
+    padding: 21px 35px 39px 22px;
+    margin: 0px;
+  }
+
+  .card-beneficios-text-container {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    align-items: baseline;
+  }
+  .contenedorBeneficios.clmm1 {
+    margin-bottom: 17px;
+  }
+  .contenedorBeneficios.clmm2 {
+    margin-bottom: 37px;
+  }
+
+  .card-beneficios-text-container p {
+    margin: 0px;
+  }
+  .logosBeneficios {
+    float: left;
+    display: flex;
+    align-items: center;
+    width: 45px;
+    margin-right: 20px;
+    align-items: baseline;
+  }
+  .cuerpoTres {
+    margin: 0px 8px 40px 8px;
+  }
+  .icono.card-beneficios-img {
+    width: 45px;
+  }
+  .subTituloCuerpo {
+    padding: 0 16px;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 12px;
+  }
+  @media only screen and (min-width: 768px) {
+    .card-beneficios-text-container p {
+      width: 100%;
+      max-width: 100%;
+    }
+    .card-beneficios-text-container {
+      min-height: auto;
+    }
+
+    .principal {
+      height: 250px;
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-gap: 0px;
+    }
+
+    .tituloTexto {
+      line-height: 40px;
+      font-size: 25px;
+      font-family: "Circular";
+      padding: 0px;
+      margin: 0px 0px 18px 0px;
+      width: 350px;
+      text-align: left;
+    }
+
+    .picture img {
+      width: 290px;
+    }
+
+    .tituloTextoSecundario {
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: 0.12px;
+      font-family: "Roboto";
+      margin-bottom: 24px;
+      padding: 0px;
+      width: 300px;
+      text-align: left;
+    }
+
+    .footer ul li {
+      display: inline;
+      margin: 10px;
+    }
+
+    .subContenedor {
+      margin-bottom: 0px;
+      width: 350px;
+    }
+  }
+  .cuerpoDos .noMobile {
+    display: none;
+  }
+  img.noMobile {
+    display: none;
+  }
+  img.siMobile {
+    display: block;
+  }
+  /*@media only screen and (min-width: 992px) {
+      .subContenedor {
+        margin-top: 41px;
+      }
+    }*/
+  @media only screen and (min-width: 992px) {
+    .cuerpoTres .card {
+      padding: 0px 53px !important;
+      margin-bottom: 60px !important;
+      height: 128px;
+      display: flex;
+      align-items: center;
+    }
+
+    .subContenedor {
+      display: block;
+      float: left;
+      position: inherit;
+      margin: 84px 20px 84px 0px;
+      width: 550px;
+    }
+
+    .card-beneficios-text-container {
+      padding: 0px 0px 0px 13px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logosBeneficios {
+      float: left;
+      margin-right: 0px;
+      display: flex;
+      align-items: center;
+      width: 45px;
+    }
+    .contenedorBeneficios {
+      margin-bottom: 0px !important;
+    }
+
+    li svg#Capa_1 {
+      display: none !important;
+    }
+
+    .clmm2 {
+      justify-content: left;
+    }
+
+    .clmm1 .card-beneficios-text-width {
+      width: 213px;
+      max-width: 213px;
+    }
+
+    .clmm2 .card-beneficios-text-width {
+      width: 247px;
+      max-width: 247px;
+    }
+    .card-height-format.beneficios {
+      width: 100%;
+    }
+
+    .clmm3 .card-beneficios-text-width {
+      width: 275px;
+      max-width: 275px;
+    }
+
+    .contenedorBeneficios.clmm3 {
+      margin-right: 0px;
+    }
+
+    .clmm2 .card-beneficios-text-width {
+      justify-content: left;
+    }
+
+    .clmm3 {
+      justify-content: right;
+    }
+
+    .subTituloCuerpo {
+      padding: 0 16px;
+      justify-content: center;
+      height: auto;
+      margin: 30px 0px 16px 0px;
+    }
+
+    .cuerpoDos .noMobile {
+      display: block;
+    }
+    img.noMobile {
+      display: block;
+    }
+    img.siMobile {
+      display: none;
+    }
+    .tituloTexto {
+      width: 555px;
+      font-size: 40px;
+      margin-bottom: 24px;
+      line-height: 48px;
+      letter-spacing: 0px;
+    }
+    .tituloTextoSecundario {
+      font-size: 20px;
+      width: 500px;
+      line-height: 30px;
+      margin: 0px;
+      text-align: left;
+      color: white;
+    }
+    .cuerpo {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    .card.accordion {
+      display: none;
+    }
+    .cuerpoDos {
+      display: grid;
+      grid-template-columns: repeat(4, calc(25% - 12.75px));
+      gap: 17px;
+    }
+    .cuerpoTres {
+      display: grid;
+      grid-template-columns: repeat(1, 100%);
+      margin: 0px;
+    }
+    .tituloTexto {
+      width: 555px;
+      font-size: 40px;
+      margin-bottom: 24px;
+    }
+
+    .cuerpo .card-link-active {
+      max-width: 100%;
+    }
+
+    /* cambios desktop */
+
+    .header.rellax {
+      padding: 10px 24px;
+    }
+    .header .pull-right {
+      line-height: 36px;
+    }
+    .header .pull-right {
+      line-height: 36px;
+    }
+    .header .logo-coppel {
+      height: 36px;
+    }
+
+    .cuerpo .card {
+      padding: 26px 24px 24px 24px;
+    }
+    .contenedorCuerpos {
+      max-width: 1140px;
+      margin: 0px auto;
+      padding: 0px 8px;
+    }
+
+    .cuerpo .card h3 {
+      margin-bottom: 24px;
+    }
+
+    .card-height-format-coppel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cuerpo .list-formating li {
+      padding: 0px 0px 0px 24px;
+    }
+
+    .cuerpo .list-formating li {
+      margin-bottom: 24px;
+    }
+
+    .doublecard .cnt_img_card.extended_mrgt {
+      margin-bottom: 18px;
+    }
+
+    .cuerpo .list-formating li.extended_mrg {
+      margin-bottom: 32px;
+    }
+
+    .cuerpo .card {
+      margin: 0px;
+    }
+
+    .tituloTexto {
+      width: 555px;
+      font-size: 40px;
+      margin-bottom: 24px;
+    }
+
+    .cuerpo .texto_links_descarga {
+      font-size: 16px;
+      font-family: "Roboto";
+      margin-bottom: 16px;
+      color: rgb(17, 17, 17);
+      line-height: 24px;
+    }
+
+    .double_link_container {
+      margin: 0px;
+      display: block;
+      width: 100%;
+    }
+
+    .double_link_container .card-download-link {
+      width: 100%;
+      display: block;
+      max-width: 100%;
+    }
+
+    .card-content-aligner.identity2 img {
+      width: 116.5px;
+      display: block;
+      margin: auto auto 11px auto;
+    }
+
+    .cuerpo .card .boton-whats {
+      margin: 119px auto 0px auto;
+    }
+
+    .cuerpoTres .card {
+      padding: 18px 39px !important;
+    }
+
+    .contenedorBeneficios {
+      display: flex;
+      margin-right: 25px;
+    }
+
+    .cuerpoDos .list-formating li,
+    .cuerpo .list-formating li,
+    .cuerpo .card.esspecial .list-formating li {
+      padding: 0px 0px 0px 24px;
+    }
+    .footer {
+      padding: 26px 40px;
+    }
+    .footer ul {
+      margin-bottom: 0px;
+      display: block;
+    }
+
+    .footer ul li {
+      display: inline-block;
+      margin: 0px 68px 21px 0px;
+      width: auto;
+    }
+
+    .footer p {
+      font-size: 13px;
+      line-height: 16px;
+      color: rgb(201, 201, 201);
+      letter-spacing: 0.4px;
+      padding-top: 5px;
+    }
+
+    .contenidoFooter {
+      background: #192c39;
+      padding: 0px;
+      width: 100%;
+      position: initial;
+      margin-left: 0px;
+    }
+
+    .contenido.principal {
+      height: 348px;
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+      grid-gap: 0px;
+    }
+
+    .subTituloCuerpo.cp1 {
+      margin: 31px 0px 16px 0px;
+    }
+
+    .subTituloCuerpo.cp2 {
+      margin: 32px 0px 16px 0px;
+    }
+
+    .subTituloCuerpo.cp3 {
+      margin: 30px 0px 12px 0px;
+    }
+
+    .subTituloCuerpo h2 br {
+      display: none;
+    }
+    .tituloTextoSecundario br {
+      display: none;
+    }
+
+    .picture img {
+      width: 390px;
+      padding: 0px;
+      margin: 43px 0px 44px;
+      float: left;
+      max-width: 390px;
+    }
+
+    .footer ul li:last-of-type {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+    .card.relatelement.lasttcard {
+      padding: 26px 14px 24px 14px;
+    }
+    .card.relatelement.lasttcard li {
+      padding: 0px 20px 0px 24px;
+    }
+
+    .imagenSinFondo {
+      border: 1px solid #9696964d;
+      height: 170px;
+      text-align: center;
+      padding: 35px 0;
+    }
+
+    .contenedorBeneficios.clmm1 {
+      max-width: 288px;
+    }
+    .contenedorBeneficios.clmm2 {
+      margin-left: -18px;
+      max-width: 323px;
+    }
+    .imagenSinFondoDos {
+      border: 1px solid #9696964d;
+      height: 170px;
+      text-align: center;
+      padding: 50px 0;
+    }
+    .icono.card-beneficios-img {
+      width: 45px;
+    }
+    .tMargin.primero.card-beneficios-subpadding-fix {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card-beneficios-text-width {
+      line-height: 24px;
+      font-weight: 400;
+      font-size: 16px;
+      color: #111;
+      margin-bottom: 0px;
+    }
+    .imagenSinFondoDos img {
+      width: 180px;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .picture img {
+      width: 390px;
+      padding: 0px;
+      margin: 43px 0px 44px;
+      float: left;
+    }
+    .tMargin.primero.card-beneficios-subpadding-fix {
+      display: inline-flex;
+    }
+
+    .container,
+    .rowContainer {
+      max-width: 1440px !important;
+      margin: 0 auto !important;
+    }
+
+    .icono.card-beneficios-img {
+      width: 64px;
+    }
+
+    .logosBeneficios {
+      width: 64px;
+    }
+
+    .contenedorCuerpos {
+      max-width: 1140px;
+      margin: 0px auto;
+      padding: 0px;
+    }
+
+    .subContenedor {
+      width: 630px;
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    .contenedorCuerpos {
+      max-width: 1140px;
+      margin: 0px auto;
+    }
+  }
+  @media only screen and (min-width: 1900px) {
+    .contenedorBeneficios {
+      display: flex;
+      margin-right: 25px;
+    }
+
+    .contenedorCuerpos {
+      max-width: 1140px;
+      margin: 0px auto;
+    }
+    .contenidoFooter {
+      max-width: 1440px;
+      margin: 0px auto;
+      width: 100%;
+      position: initial;
+    }
+
+    .subTituloCuerpo h2 br {
+      display: none;
+    }
+  }
+</style>
+<div class="header rellax">
+  <div class="grid-container">
+    <div class="grid-item">
+      <a href="/" class="tlogo_coppel">
+        <img
+          src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+          data-original="https://cdn2.coppel.com/images/emarketing/logo.svg"
+          alt="logo"
+          class="logo-coppel pull-left lazyImg"
+        />
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="/" class="pull-right tbtn_regresar">Regresar</a>
+    </div>
+  </div>
+</div>
+<div class="contenido principal">
+  <div class="subContenedor">
+    <h1 class="tituloTexto">Abona a tu Crédito Coppel donde quieras</h1>
+    <p class="tituloTextoSecundario">
+      Por Coppel.com, App Coppel y<br />
+      WhatsApp puedes abonar sin salir <br />de casa
+    </p>
+  </div>
+  <div class="subContenedorDos">
+    <div class="picture">
+      <img
+        class="lazyImg noMobile"
+        src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+        data-original="https://cdn2.coppel.com/images/emarketing/abonos/img-banner-img-desktop.png"
+        alt="Abona a tu crédito Coppel donde quieras"
+      />
+      <img
+        class="lazyImg siMobile"
+        src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+        data-original="https://cdn2.coppel.com/images/emarketing/abonos/img-banner-img-mobile.png"
+        alt="Abona a tu crédito Coppel donde quieras"
+      />
+    </div>
+  </div>
+</div>
+<div class="contenedorCuerpos">
+  <div class="subTituloCuerpo cp1">
+    <h2>
+      Sigue estos pasos para<br />
+      abonar en:
+    </h2>
+  </div>
+  <div class="cuerpoCoppel">
+    <div class="card esspecial">
+      <h3>Coppel.com</h3>
+      <div class="card-height-format">
+        <div class="card-height-format-coppel">
+          <ol class="list-formating">
+            <li>
+              Inicia sesión en tu Cuenta Coppel.<br />
+              <a
+                href="/UserRegistrationForm?myAcctMain=1&catalogId=10051&registerNew=: Y&langId=-5&storeId=10151"
+                class="card-link-format"
+                >Si aún no la tienes, créala ahora</a
+              >
+            </li>
+            <li>
+              Si tienes tu crédito y aún no está ligado a tu cuenta de
+              Coppel.com,
+              <br />
+              <a
+                href="/UserRegistrationForm?editRegistration=Y&catalogId=10051&langId=-5&storeId=10151&userRegistrationStyle=strong"
+                class="card-link-format"
+                >usa tu número de cliente para ligar tu crédito aquí</a
+              >
+            </li>
+            <li>
+              <a
+                href="/StatementAccount?catalogId=10051&storeId=10151&langId=-5"
+                class="card-link-format"
+                >Ve a la sección de Estado de cuenta y da clic en Abonar a
+                crédito</a
+              >
+            </li>
+          </ol>
+          <ol class="list-formating-coppel">
+            <li>
+              Escoge las cuentas que quieres pagar y la cantidad de tu abono
+              <br />
+              <span class="card-subtext-format"
+                >Para pagar la cuenta de otra persona, ingresa el número de
+                cliente al que quieres abonar. Este se encuentra al frente de la
+                tarjeta o en el estado de cuenta
+              </span>
+            </li>
+            <li class="extended_mrg">Paga con una tarjeta de débito</li>
+          </ol>
+        </div>
+        <a
+          href="/LogonForm?catalogId=10051&myAcctMain=1&langId=-5&storeId=10151"
+          class="card-link-active"
+          >Inicia sesión para abonar<em
+            class="fa fa-chevron-right pull-right card-icon-link"
+          ></em
+        ></a>
+        <div class="card-content-aligner card-link-margin">
+          <a
+            href="/UserRegistrationForm?myAcctMain=1&catalogId=10051&registerNew=: Y&langId=-5&storeId=10151"
+            class="card-link-format"
+            >Crear una cuenta</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cuerpo">
+    <div class="card">
+      <h3>App Coppel</h3>
+      <div class="card-height-format">
+        <ol class="list-formating">
+          <li>
+            Abre la App Coppel en tu teléfono móvil e inicia sesión. Si aún no
+            tienes una cuenta, créala desde tu aplicación o en Coppel.com
+          </li>
+          <li>
+            Si ya eres cliente, entra a la sección de Abonos o a Estado de
+            cuenta
+          </li>
+          <li>
+            Escoge las cuentas que quieres pagar y la cantidad de tu abono
+            <br />
+            <span class="card-subtext-format"
+              >Para pagar la cuenta de otra persona, ingresa el número de
+              cliente al que quieres abonar. Este se encuentra al frente de la
+              tarjeta o en el estado de cuenta
+            </span>
+          </li>
+          <li class="extended_mrg">Paga con una tarjeta de débito</li>
+        </ol>
+        <div class="card-content-aligner card-content-aligner identity2">
+          <p class="texto_links_descarga">Descarga desde:</p>
+          <div class="double_link_container">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.coppel.coppelapp"
+              class="card-download-link"
+            >
+              <img
+                class="quitarPadding lazyImg"
+                src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+                data-original="https://cdn2.coppel.com/images/emarketing/abonos/Logo-Badge-Play-store.svg"
+                alt="Descarga desde google play"
+              />
+            </a>
+            <a
+              href="https://apps.apple.com/app/id1267382794"
+              class="card-download-link lastt_lnk"
+            >
+              <img
+                class="quitarPadding lazyImg"
+                src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+                data-original="https://cdn2.coppel.com/images/emarketing/abonos/Logo-Badge-App-store.svg"
+                alt="Descarga desde app store"
+              />
+            </a>
+          </div>
+          <a
+            href="https://appgallery7.huawei.com/#/app/C100930013"
+            class="card-download-link"
+          >
+            <img
+              class="quitarPadding lazyImg noMargingBottom"
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/Logo-Badge-App-Gallery.svg"
+              alt="Descarga desde AppGallery"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="card relatelement lasttcard">
+      <h3>WhatsApp</h3>
+      <div class="card-height-format">
+        <ol class="list-formating">
+          <li>
+            <a href="https://www.coppel.com/whatsapp" class="card-link-format"
+              >Registra tu teléfono móvil en el servicio de WhatsApp.</a
+            >
+            Necesitarás tu número de cliente
+          </li>
+          <li>
+            Asegúrate de:<br />
+            • Guardar el número en tus contactos<br />
+            • Que la cuenta tenga la insignia verde
+            <img
+              class="icon-small lazyImg"
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/whatsapp/Group-22.png"
+              style="
+                display: inline-block !important;
+                max-width: 18px;
+                margin-right: 5px;
+              "
+              alt="Icono de insignia verde de WhatsApp"
+            />
+            al lado del nombre del contacto.<br />
+            Esto confirma que es una cuenta verificada por WhatsApp
+          </li>
+          <li>Abre una conversación y escríbenos “Hola”</li>
+          <li>
+            Sigue las instrucciones y abona a tus cuentas con una Tarjeta de
+            Débito BanCoppel
+          </li>
+        </ol>
+        <a
+          href="https://www.coppel.com/whatsapp"
+          class="boton-whats card-link-inactive"
+          >Registrar mi número</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="subTituloCuerpo cp2">
+    <h2>Otras formas de abonar</h2>
+  </div>
+  <div class="cuerpoDos">
+    <div class="card accordion">
+      <section class="ac-container">
+        <div class="cont-ac1">
+          <input
+            id="ac-1"
+            name="accordion-1"
+            class="radio_acordion"
+            type="radio"
+          />
+          <label for="ac-1" class="firstt lblnm">Tiendas Coppel</label>
+          <article class="ac-small">
+            <ol class="list-formating">
+              <li>
+                <a
+                  href="https://www.coppel.com/ubicacion-de-tiendas-coppel"
+                  class="card-link-format"
+                  onclick="event.stopPropagation();"
+                  >Ubica aquí tu Tienda Coppel más cercana</a
+                >
+              </li>
+              <li>
+                Acércate a Cajas de Abono o a cualquier caja de muebles o ropa
+              </li>
+              <li>
+                Paga con efectivo o tarjeta de débito <br />
+                <span class="card-subtext-format"
+                  >Olvídate de filas y retardos con el servicio de
+                  <strong> Pagos Automáticos</strong>. Pregunta en cualquier
+                  caja. Solo necesitas tu INE/IFE y una tarjeta de débito</span
+                >
+              </li>
+            </ol>
+          </article>
+        </div>
+        <div>
+          <input
+            id="ac-2"
+            name="accordion-1"
+            class="radio_acordion"
+            type="radio"
+          />
+          <label for="ac-2" class="lblnm">Cajero Automático BanCoppel</label>
+          <article class="ac-small">
+            <ol class="list-formating">
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/cajero+bancoppel/"
+                  class="card-link-format"
+                  onclick="event.stopPropagation();"
+                  >Ubica aquí tu Cajero Automático BanCoppel más cercano</a
+                >
+              </li>
+              <li>Inserta tu Tarjeta de Débito BanCoppel y digita tu NIP</li>
+              <li>Selecciona la opción <strong> Pagos Créditos</strong></li>
+              <li>Digita el número de cliente Coppel al que quieres abonar</li>
+              <li>Ingresa el monto y confirma tu pago</li>
+            </ol>
+
+            <p class="card-full-message">
+              ¡Listo! tu abono se refleja al instante
+            </p>
+          </article>
+        </div>
+        <div>
+          <input
+            id="ac-3"
+            name="accordion-1"
+            class="radio_acordion"
+            type="radio"
+          />
+          <label for="ac-3" class="lblnm">Supervisor de crédito</label>
+          <article class="ac-large">
+            <ol class="list-formating">
+              <li>Un supervisor de crédito Coppel visitará tu domicilio</li>
+              <li>Abona en efectivo. No tiene comisión</li>
+              <li>
+                Obtén tu recibo y úsalo como comprobante para cualquier
+                aclaración
+              </li>
+            </ol>
+          </article>
+        </div>
+        <div>
+          <input
+            id="ac-4"
+            name="accordion-1"
+            class="radio_acordion"
+            type="radio"
+          />
+          <label for="ac-4" class="lblnm">Telecomm</label>
+          <article class="ac-large">
+            <ol class="list-formating">
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/telecomm+telegrafos"
+                  class="card-link-format labonos-telecomm-ubicaAqui"
+                  onclick="event.stopPropagation();"
+                  >Ubica aquí tu sucursal Telecomm más cercana</a
+                >
+              </li>
+              <li>Abona en efectivo a tu cuenta. No tiene comisión</li>
+              <li>Recibe tu folio y úsalo como comprobante de pago</li>
+            </ol>
+          </article>
+        </div>
+        <div>
+          <input
+            id="ac-5"
+            name="accordion-1"
+            class="radio_acordion"
+            type="radio"
+          />
+          <label for="ac-5" class="lblnm">Pago en tienda Oxxo</label>
+          <article class="ac-medium lastt">
+            <ol class="list-formating">
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/oxxo/"
+                  class="card-link-format labonos-oxxo-ubicaAqui"
+                  onclick="event.stopPropagation();"
+                  >Ubica aquí tu tienda Oxxo más cercana</a
+                >
+              </li>
+              <li>
+                Menciona en caja que quieres pagar tu Crédito Coppel e indica tu
+                número de cliente
+              </li>
+              <li>
+                Paga en efectivo la cantidad de tu abono más una comisión de
+                $12. Puedes hacer pagos desde $100 y hasta $10,000
+                <span class="card-subtext-format">
+                  Recuerda que primero usaremos tu dinero para pagar tus cuentas
+                  vencidas y luego se distribuirá en las demás cuentas
+                </span>
+              </li>
+            </ol>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="card noMobile 1">
+      <div class="cnt_img_card">
+        <img
+          class="lazyImg ajustt"
+          src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+          data-original="https://cdn2.coppel.com/images/emarketing/abonos/tiendas-coppel.png"
+          alt="Tiendas Coppel"
+        />
+      </div>
+
+      <h3>Tiendas Coppel</h3>
+      <div class="card-height-format">
+        <ol class="list-formating">
+          <li>
+            <a
+              href="https://www.coppel.com/ubicacion-de-tiendas-coppel"
+              class="card-link-format"
+              onclick="event.stopPropagation();"
+              >Ubica aquí tu Tienda Coppel más cercana</a
+            >
+          </li>
+          <li>
+            Acércate a Cajas de Abono o a cualquier caja de muebles o ropa
+          </li>
+          <li>
+            Paga con efectivo o tarjeta de débito <br />
+            <span class="card-subtext-format"
+              >Olvídate de filas y retardos con el servicio de
+              <strong> Pagos Automáticos</strong>. Pregunta en cualquier caja.
+              Solo necesitas tu INE/IFE y una tarjeta de débito</span
+            >
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="card noMobile 2">
+      <div class="imagenSinFondo cnt_img_card">
+        <img
+          class="lazyImg border-img ajustt"
+          src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+          data-original="https://i.ibb.co/28fDj8r/ATM-FINAL.png"
+          alt="Tiendas Coppel"
+        />
+      </div>
+      <h3>Cajero Automático BanCoppel</h3>
+      <div class="card-height-format">
+        <ol class="list-formating">
+          <li>
+            <a
+              href="https://www.google.com/maps/search/cajero+bancoppel/"
+              class="card-link-format"
+              onclick="event.stopPropagation();"
+              >Ubica aquí tu Cajero Automático BanCoppel más cercano</a
+            >
+          </li>
+          <li>Inserta tu Tarjeta de Débito BanCoppel y digita tu NIP</li>
+          <li>Selecciona la opción <strong> Pagos Créditos</strong></li>
+          <li>Digita el número de cliente Coppel al que quieres abonar</li>
+          <li>Ingresa el monto y confirma tu pago</li>
+        </ol>
+        <p class="card-full-message">
+          ¡Listo, tu abono se refleja al instante!
+        </p>
+      </div>
+    </div>
+
+    <div class="doublecard noMobile 3">
+      <div class="card noMobile 4">
+        <div class="cnt_img_card extended_mrgt">
+          <img
+            class="lazyImg"
+            src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+            data-original="https://i.ibb.co/x50T6GK/SUPERVISOR.png"
+            alt="Supervisor de crédito"
+          />
+        </div>
+        <h3>Supervisor de crédito</h3>
+        <div class="card-height-format">
+          <ol class="list-formating">
+            <li>Un supervisor de crédito Coppel visitará tu domicilio</li>
+            <li>Abona en efectivo. No tiene comisión</li>
+            <li>
+              Obtén tu recibo y úsalo como comprobante para cualquier aclaración
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="card noMobile 5">
+        <div class="imagenSinFondoDos cnt_img_card sinfondo_small">
+          <img
+            class="lazyImg"
+            src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+            data-original="https://cdn2.coppel.com/images/emarketing/abonos/telecomm.png"
+            alt="Telecomm"
+          />
+        </div>
+        <h3>Telecomm</h3>
+        <div class="card-height-format">
+          <ol class="list-formating">
+            <li>
+              <a
+                href="https://www.google.com/maps/search/telecomm+telegrafos"
+                class="card-link-format labonos-telecomm-ubicaAqui"
+                onclick="event.stopPropagation();"
+                >Ubica aquí tu sucursal Telecomm más cercana</a
+              >
+            </li>
+            <li>Abona en efectivo a tu cuenta. No tiene comisión</li>
+            <li>Recibe tu folio y úsalo como comprobante de pago</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="card noMobile 4">
+      <div class="imagenSinFondo cnt_img_card">
+        <img
+          class="lazyImg oxxo_img"
+          src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+          data-original="https://cdn2.coppel.com/images/emarketing/abonos/tiendas-oxxo.png"
+          alt="Tiendas oxxo"
+        />
+      </div>
+      <h3>Pago en tienda Oxxo</h3>
+      <div class="card-height-format">
+        <ol class="list-formating">
+          <li>
+            <a
+              href="https://www.google.com/maps/search/oxxo/"
+              class="card-link-format labonos-oxxo-ubicaAqui"
+              onclick="event.stopPropagation();"
+              >Ubica aquí tu tienda Oxxo más cercana</a
+            >
+          </li>
+          <li>
+            Menciona en caja que quieres pagar tu Crédito Coppel e indica tu
+            número de cliente
+          </li>
+          <li>
+            Paga en efectivo la cantidad de tu abono más una comisión de $12.
+            Puedes hacer pagos desde $100 y hasta $10,000
+            <span class="card-subtext-format">
+              Recuerda que primero usaremos tu dinero para pagar tus cuentas
+              vencidas y luego se distribuirá en las demás cuentas
+            </span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="subTituloCuerpo cp3">
+    <h2>
+      Pagar a tiempo tiene grandes<br />
+      beneficios para ti
+    </h2>
+  </div>
+  <div class="cuerpoTres">
+    <div class="card">
+      <div class="card-height-format beneficios">
+        <div
+          class="tMargin primero card-beneficios-subpadding-fix card-beneficios-height-fix"
+        >
+          <div class="contenedorBeneficios clmm1">
+            <div class="logosBeneficios">
+              <img
+                class="icono card-beneficios-img lazyImg"
+                src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+                data-original="https://cdn2.coppel.com/images/emarketing/abonos/circulo_tarjeta.png"
+                alt=""
+              />
+            </div>
+            <div class="card-beneficios-text-container">
+              <p class="card-beneficios-text-width">
+                Compra a crédito a un plazo mayor y sin pago inicial
+              </p>
+            </div>
+          </div>
+
+          <div class="contenedorBeneficios clmm2">
+            <div class="logosBeneficios">
+              <img
+                class="icono card-beneficios-img lazyImg"
+                src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+                data-original="https://cdn2.coppel.com/images/emarketing/abonos/circulo_llave.png"
+                alt=""
+              />
+            </div>
+            <div class="card-beneficios-text-container">
+              <p class="card-beneficios-text-width">
+                <a href="/coppel-pay" class="card-link-format"
+                  >Usa tu crédito para comprar en negocios afiliados con Coppel
+                  Pay</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="contenedorBeneficios clmm3">
+            <div class="logosBeneficios">
+              <img
+                class="icono card-beneficios-img lazyImg"
+                src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+                data-original="https://cdn2.coppel.com/images/emarketing/abonos/circulo_mano.png"
+                alt=""
+              />
+            </div>
+            <div class="card-beneficios-text-container">
+              <p class="card-beneficios-text-width">
+                <a href="/solicitar-prestamo-personal" class="card-link-format"
+                  >Solicita préstamos de dinero en cualquier momento en
+                  Coppel.com, App Coppel y Tienda Coppel</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="contenidoFooter">
+  <div class="footer">
+    <ul>
+      <li>
+        <a href="https://www.coppel.com/aviso-de-privacidad"
+          >Aviso de privacidad</a
+        >
+      </li>
+      <li>
+        <a href="https://www.coppel.com/terminos-y-condiciones"
+          >Términos y condiciones</a
+        >
+      </li>
+      <li><a href="/compra-segura">Seguridad en Coppel</a></li>
+      <li><a href="preguntas-frecuentes">Preguntas frecuentes</a></li>
+      <li><a href="/mapa-del-sitio">Mapa del sitio </a></li>
+      <li><a href="https://www.coppel.com.ar/"> Coppel Argentina </a></li>
+      <li>
+        <a
+          href="https://www.hearcolors.com.mx/SelloAccesibilidad.php?num_clte=FA30D267"
+          >Declaración de accesibilidad</a
+        >
+      </li>
+    </ul>
+    <p>2022 © Coppel todos los derechos reservados</p>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-messaging.js"></script>
+<script>
+  var scrollToTopBtn = document.getElementById("js-cd-top");
+  var rootElement = document.documentElement;
+
+  function scrollToTop() {
+    // Scroll to top logic
+    rootElement.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+  scrollToTopBtn.addEventListener("click", scrollToTop);
+
+  var messaging;
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBgDW1KTrEeS8mdFgNpWfiZhCpZhGs45lU",
+    authDomain: "app-coppel.firebaseapp.com",
+    databaseURL: "https://app-coppel.firebaseio.com",
+    projectId: "app-coppel",
+    storageBucket: "app-coppel.appspot.com",
+    messagingSenderId: "692777122126",
+    appId: "1:692777122126:web:feba06cf0308d645a0861f",
+    measurementId: "G-RM000QBBJG",
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  /* Validar si está disponible la librería de firebase */
+  if (typeof firebase != "undefined") {
+    console.log("const messaging = firebase.messaging();");
+    messaging = firebase.messaging();
+    messaging.usePublicVapidKey(appPublicKey);
+  }
+</script>
+<script>
+  $(document).ready(function () {
+    dataLayer.push({
+      page: "/landing-abonos",
+      title: "Landing abonos",
+      event: "pvlandingGeneral",
+    });
+
+    $(".tlogo_coppel").on("click", function (e) {
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Logo Coppel",
+        nd3: "",
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".tbtn_regresar").on("click", function (e) {
+      console.log("push6");
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Volver a Coppel.com",
+        nd3: "",
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".cuerpo a").on("click", function (e) {
+      console.log("push5");
+      var nn = $(this).parents(".card").find("h3").text();
+      if ($(this).hasClass("card-download-link")) {
+        nn += " - " + $(this).find("img").attr("alt");
+      } else {
+        nn += " - " + $(this).text();
+      }
+      nn.replace("<br/>", "");
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Sigue estos pasos para abonar en:",
+        nd3: nn,
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".cuerpoDos .card article a").on("click", function (e) {
+      console.log("push4");
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Otras formas de abonar",
+        nd3:
+          $(this)
+            .parent()
+            .parent()
+            .parent()
+            .parent()
+            .find("label.lblnm")
+            .text()
+            .replace("<br/>", "") +
+          " - " +
+          $(this).text().replace("<br/>", ""),
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".cuerpoDos .card.noMobile a").on("click", function (e) {
+      var nn = $(this).parents(".card").find("h3").text();
+      nn += " - " + $(this).text();
+      nn.replace("<br/>", "");
+      console.log("push3");
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Otras formas de abonar",
+        nd3: nn,
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".cuerpoTres a").on("click", function (e) {
+      console.log("push2");
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Pagar a tiempo tiene grandes beneficios para ti",
+        nd3: $(this).text().replace("<br/>", ""),
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".cuerpoDos .lblnm").on("click", function (e) {
+      var radio_acordion = $(this).parent().find(".radio_acordion");
+
+      e.preventDefault();
+      if (radio_acordion.hasClass("checcked")) {
+        radio_acordion.removeClass("checcked");
+      } else {
+        console.log("push1");
+        dataLayer.push({
+          nd1: "Landing Abonos",
+          nd2: "Otras formas de abonar",
+          nd3: $(this).text().replace("<br/>", ""),
+          nd4: "",
+          event: "clicGeneral",
+        });
+
+        $(".cuerpoDos .radio_acordion").removeClass("checcked");
+        radio_acordion.addClass("checcked");
+      }
+      if ($(".radio_acordion.checcked").length > 0) {
+        $(".card.accordion").addClass("openborder");
+      } else {
+        $(".card.accordion").removeClass("openborder");
+      }
+    });
+  });
+</script>
