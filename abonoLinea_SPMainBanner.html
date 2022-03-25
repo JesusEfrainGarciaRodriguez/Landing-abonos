@@ -24,7 +24,7 @@
     display: inline;
     font-size: 16px !important;
     line-height: 24px;
-    color: #006fb9 !important;
+    color: #0070bf !important;
     /*font-family: "Roboto-bold";*/
   }
   .card-subtext-format {
@@ -139,7 +139,7 @@
   }
   .cuerpoCoppel .card,
   .cuerpo .card {
-    border-top: 8px solid #ffdd30;
+    border-top: 6px solid #fddd2e;
   }
   .picture img {
     width: 100%;
@@ -264,7 +264,7 @@
 
   .cuerpoDos .list-formating li,
   .cuerpo .list-formating li {
-    color: #212121;
+    color: #111111;
     font-family: Roboto;
     letter-spacing: 0px;
     margin-bottom: 14px;
@@ -313,6 +313,7 @@
     line-height: 21px;
     margin: 0px;
     top: 2px;
+    font-size: 18px;
   }
 
   .cuerpoDos .card .boton-whats {
@@ -371,6 +372,9 @@
     height: auto;
     margin-bottom: 0px;
     border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .cuerpoDos .ac-container {
@@ -419,9 +423,6 @@
 
   .cuerpoDos .ac-container label.firstt {
     border-radius: 8px;
-  }
-  .cuerpoDos .card.accordion.openborder .ac-container label.firstt {
-    padding-top: 12px !important;
   }
   .cuerpoDos .card-subtext-format,
   .cuerpo .card-subtext-format {
@@ -666,7 +667,7 @@
     z-index: 20;
     display: block;
     cursor: pointer;
-    color: #111;
+    color: #000000;
     border-bottom: 1px solid #edeef2;
     border-width: 1px;
   }
@@ -683,12 +684,10 @@
     right: 13px;
     top: 7px;
     color: #005491;
+    font-size: 18px;
   }
   .ac-container input.checcked + label::after {
-    content: "-";
-  }
-  .cuerpoDos .ac-container input.checcked + label::after {
-    margin-right: -2.5px;
+    content: "–";
   }
   .ac-container input {
     display: none;
@@ -742,9 +741,6 @@
     border-radius: 3px;
   }
 
-  .ac-container input.checcked ~ article.ac-small {
-    padding-bottom: 32px;
-  }
   .ac-container input.checcked ~ article.ac-small {
     height: auto;
   }
@@ -880,6 +876,9 @@
     height: auto;
     margin-bottom: 12px;
   }
+  .subTituloCuerpo.cp2 {
+    margin: 6px 0px 12px 0px;
+  }
   @media only screen and (max-width: 767px) {
       .card-link-active {
         height: 48px;
@@ -940,6 +939,69 @@
       padding: 0 0 0 0;
       width: 300px;
       text-align: left;
+    }
+
+    .card-link-format {
+      color: #006fb9 !important;
+    }
+
+    .cuerpoDos .list-formating li::before,
+    .cuerpo .list-formating li::before {
+      font-size: 16px;
+      color: #00569b;
+    }
+
+    .cuerpoDos .ac-container {
+      padding: 0px 24px;
+    }
+
+    .cuerpoDos .ac-container label {
+      font-size: 14px;
+      letter-spacing: 0.25px;
+      line-height: 21px;
+      padding: 13px 13px 14px 15px;
+    }
+
+    .cuerpoDos .ac-container input.checcked + label {
+      color: #0057a0;
+      border-bottom: 1px solid rgb(224, 224, 224);
+      margin-bottom: 16px;
+      padding: 13px 11px 14px 15px;
+      border-radius: 0;
+    }
+
+    .cuerpoDos .list-formating li,
+    .cuerpo .list-formating li {
+      color: #212121;
+    }
+
+    .cuerpoCoppel .card,
+    .cuerpo .card {
+      border-top: 8px solid #ffdd30;
+    }
+
+    .card.accordion.openborder {
+      border-top: 8px solid #ffdd30;
+    }
+
+    .ac-container label::after {
+      font-size: 20px;
+    }
+
+    .ac-container .cont-ac1 input.checcked ~ article {
+      padding: 0px 16px 24px 36px;
+    }
+
+    .ac-container input.checcked ~ article {
+      padding: 0px 8px 24px 36px;
+    }
+
+    .ac-container div:last-child input.checcked ~ article {
+      padding-bottom: 32px;
+    }
+
+    .cuerpoDos article {
+      border-bottom: 1px solid #e0e0e0;
     }
 
     .footer ul li {
@@ -1249,7 +1311,7 @@
     }
 
     .subTituloCuerpo.cp2 {
-      margin: 32px 0px 16px 0px;
+      margin: 28px 0px 16px 0px;
     }
 
     .subTituloCuerpo.cp3 {
@@ -1612,7 +1674,7 @@
                 Paga con efectivo o tarjeta de débito <br />
                 <span class="card-subtext-format"
                   >Olvídate de filas y retardos con el servicio de
-                  <strong> Pagos Automáticos</strong>. Pregunta en cualquier
+                  <strong> Pagos Automáticos</strong>. Pregunta en <br class="hidden-xs"> cualquier
                   caja. Solo necesitas tu INE/IFE y una tarjeta de débito</span
                 >
               </li>
@@ -1637,7 +1699,7 @@
                   >Ubica aquí tu Cajero Automático BanCoppel más cercano</a
                 >
               </li>
-              <li>Inserta tu Tarjeta de Débito BanCoppel y digita tu NIP</li>
+              <li style="margin-right: 5px;">Inserta tu Tarjeta de Débito BanCoppel y digita tu NIP</li>
               <li>Selecciona la opción <strong> Pagos Créditos</strong></li>
               <li>Digita el número de cliente Coppel al que quieres abonar</li>
               <li>Ingresa el monto y confirma tu pago</li>
@@ -1659,7 +1721,7 @@
           <article class="ac-large">
             <ol class="list-formating">
               <li>Un supervisor de crédito Coppel visitará tu domicilio</li>
-              <li>Abona en efectivo. No tiene comisión</li>
+              <li>Abona en efectivo o con Tarjeta de débito. No tiene comisión</li>
               <li>
                 Obtén tu recibo y úsalo como comprobante para cualquier
                 aclaración
@@ -1677,7 +1739,7 @@
           <label for="ac-4" class="lblnm">Telecomm</label>
           <article class="ac-large">
             <ol class="list-formating">
-              <li>
+              <li style="margin-right: 17px;">
                 <a
                   href="https://www.google.com/maps/search/telecomm+telegrafos"
                   class="card-link-format labonos-telecomm-ubicaAqui"
@@ -1708,13 +1770,13 @@
                   >Ubica aquí tu tienda Oxxo más cercana</a
                 >
               </li>
-              <li>
+              <li style="margin-right: 14px;">
                 Menciona en caja que quieres pagar tu Crédito Coppel e indica tu
                 número de cliente
               </li>
-              <li>
+              <li style="margin-right: 1px;">
                 Paga en efectivo la cantidad de tu abono más una comisión de
-                $12. Puedes hacer pagos desde $100 y hasta $10,000
+                $13. Puedes hacer pagos desde $100 y hasta $10,000
                 <span class="card-subtext-format">
                   Recuerda que primero usaremos tu dinero para pagar tus cuentas
                   vencidas y luego se distribuirá en las demás cuentas
