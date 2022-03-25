@@ -544,17 +544,6 @@
     font-weight: 600;
   }
   .card-link-active {
-    /*height: 48px;
-    display: block;
-    color: white;
-    line-height: 48px;
-    font-size: 16px;
-    text-align: center;
-    background-color: #016db6;
-    border-radius: 10px;
-    width: max-content;
-    margin: 0 auto;
-    padding: 0px 8px;*/
     height: 48px;
     display: block;
     color: rgb(0, 111, 185);
@@ -573,11 +562,6 @@
     margin-top: 15px;
     margin-right: 0px;
   }
- /* .card-link-active:hover {
-    background-color: #1c5c95;
-    color: white;
-    text-decoration: none;
-  }*/
   .card-content-aligner.card-link-margin {
     border: none;
     text-decoration: underline;
@@ -896,11 +880,41 @@
         border: 1px solid rgb(0, 111, 185);
         margin: 0 0 0 24px;
     }
+    .column-coppel-pay{
+      width: 220px;
+    }
+    .clmm2 .card-beneficios-text-width {
+      width: 245px;
+      max-width: 245px;
+    }
+    .clmm3 .card-beneficios-text-width {
+      width: 250px;
+      max-width: 250px;
+    }
+    .logosBeneficios {
+      float: left;
+      display: flex;
+      align-items: center;
+      width: 45px;
+      margin-right: 10px;
+      align-items: baseline;
+    }
   }
   @media only screen and (min-width: 768px) {
-    .card-beneficios-text-container p {
+   /* .card-beneficios-text-container p {
       width: 100%;
       max-width: 100%;
+    }*/
+    .column-coppel-pay{
+      width: 220px;
+    }
+    .clmm2 .card-beneficios-text-width {
+      width: 245px;
+      max-width: 245px;
+    }
+    .clmm3 .card-beneficios-text-width {
+      width: 291px;
+      max-width: 288px;
     }
     .card-beneficios-text-container {
       min-height: auto;
@@ -1087,22 +1101,28 @@
       justify-content: left;
     }
 
-    .clmm1 .card-beneficios-text-width {
+    /*.clmm1 .card-beneficios-text-width {
       width: 213px;
       max-width: 213px;
+    }*/
+    .column-tarjeta-credito{
+      width: 260px;
+    }
+    .column-coppel-pay{
+      width: 264px;
     }
 
     .clmm2 .card-beneficios-text-width {
-      width: 247px;
-      max-width: 247px;
+      width: 264px;
+      max-width: 264px;
     }
     .card-height-format.beneficios {
       width: 100%;
     }
 
     .clmm3 .card-beneficios-text-width {
-      width: 275px;
-      max-width: 275px;
+      width: 276px;
+      max-width: 276px;
     }
 
     .contenedorBeneficios.clmm3 {
@@ -1373,10 +1393,11 @@
     }
     .card-beneficios-text-width {
       line-height: 24px;
-      font-weight: 400;
       font-size: 16px;
-      color: #111;
-      margin-bottom: 0px;
+      color: rgb(33, 33, 33);
+      margin-bottom: 0px;;
+      height: 62px;
+      letter-spacing: 0.5px;
     }
     .imagenSinFondoDos img {
       width: 180px;
@@ -1810,8 +1831,8 @@
                 alt=""
               />
             </div>
-            <div class="card-beneficios-text-container">
-              <p class="card-beneficios-text-width">
+            <div class="card-beneficios-text-container ">
+              <p class="card-beneficios-text-width column-tarjeta-credito">
                 Compra a crédito a un plazo mayor y sin pago inicial
               </p>
             </div>
@@ -1827,7 +1848,7 @@
               />
             </div>
             <div class="card-beneficios-text-container">
-              <p class="card-beneficios-text-width">
+              <p class="card-beneficios-text-width column-coppel-pay">
                 <a href="/coppel-pay" class="card-link-format"
                   >Usa tu crédito para comprar en negocios afiliados con Coppel
                   Pay</a
@@ -1847,8 +1868,7 @@
             <div class="card-beneficios-text-container">
               <p class="card-beneficios-text-width">
                 <a href="/solicitar-prestamo-personal" class="card-link-format"
-                  >Solicita préstamos de dinero en cualquier momento en
-                  Coppel.com, App Coppel y Tienda Coppel</a
+                  >Solicita tu préstamo cuando quieras en Coppel.com, App Coppel,<br  class="hidden-xs"> Tienda Coppel o WhatsApp</a
                 >
               </p>
             </div>
