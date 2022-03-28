@@ -149,13 +149,6 @@
     text-align: center;
     margin-bottom: 0px;
   }
-  .cuerpo {
-    display: grid;
-    float: left;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    margin-bottom: 0px;
-  }
 
   .subTituloCuerpo {
     text-align: center;
@@ -410,7 +403,7 @@
 
   .cuerpo .card {
     padding: 24px 16px;
-    margin: 0px 8px 8px 8px;
+    margin: 0px 3px 8px 8px;
   }
 
   .cuerpo .card h3 {
@@ -458,7 +451,6 @@
   .card-height-format-coppel {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
   }
   .card-height-format {
     min-height: auto;
@@ -487,9 +479,10 @@
     color: #0072be;
     display: inline-block;
     font-size: 16px;
-    width: 1em;
-    margin-left: -1em;
+    width: 1.5em;
+    margin-left: -1.5em;
     font-weight: 600;
+    position: absolute;
   }
   .list-formating-coppel div {
     margin-left: 6px;
@@ -550,6 +543,7 @@
     width: 1.5em;
     margin-left: -1.5em;
     font-weight: 600;
+    position: absolute;
   }
   .card-link-active {
     height: 48px;
@@ -869,7 +863,47 @@
   .subTituloCuerpo.cp2 {
     margin: 6px 0px 12px 0px;
   }
+  .cuerpo .card.lasttcard .list-formating li .hidden-lg {
+    display: none;
+  }
   @media only screen and (max-width: 767px) {
+    .cuerpoCoppel .card {
+      padding: 24px 16px;
+    }
+    .cuerpoCoppel .card.esspecial .list-formating,
+    .cuerpoCoppel .card.esspecial .list-formating-coppel {
+      padding: 0px;
+      margin: 0px;
+    }
+    .cuerpoCoppel .card.esspecial .list-formating li,
+    .cuerpoCoppel .card.esspecial .list-formating-coppel li {
+      padding: 0px 9px 0px 24px;
+    }
+    .cuerpoCoppel .card.esspecial .list-formating li:nth-child(1) {
+      padding-right: 12px;
+    }
+    .cuerpoCoppel .card.esspecial .list-formating li:nth-child(2) {
+      padding-right: 0px;
+    }
+    .cuerpoCoppel .card.esspecial .list-formating-coppel li:nth-child(1) {
+      padding-right: 19px;
+    }
+    .cuerpo .list-formating.appCoppel li {
+      padding-right: 0px;
+    }
+    .cuerpo .list-formating.appCoppel li .card-subtext-format {
+      padding-right: 15px;
+    }
+    .cuerpo .card.lasttcard {
+      padding-right: 0px;
+    }
+    .cuerpo .card.lasttcard .list-formating li:nth-child(1),
+    .cuerpo .card.lasttcard .list-formating li:nth-child(2) {
+      padding-right: 10px;
+    }
+    .cuerpo .card.lasttcard .list-formating li .hidden-lg {
+      display: block;
+    }
     .column-coppel-pay{
       width: 220px;
     }
@@ -1150,6 +1184,7 @@
       letter-spacing: 0.5px;
     }
     .cuerpo {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 22px;
     }
@@ -1197,11 +1232,12 @@
     }
 
     .card-height-format-coppel {
-        grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
 
     .cuerpo .list-formating.appCoppel {
-      max-width: 475px;
+      max-width: 504px;
     }
 
     .cuerpo .list-formating li {
@@ -1297,7 +1333,7 @@
     }
 
     .subTituloCuerpo.cp1 {
-		margin: 0px 0px 16px 0px;
+		margin: 28px 0px 16px 0px;
     }
 
     .subTituloCuerpo.cp2 {
@@ -1456,7 +1492,7 @@
     </p>
     <a href="/LogonForm?catalogId=10051&myAcctMain=1&langId=-5&storeId=10151" class="card-link-active">
       Iniciar sesión para abonar
-  </a>
+    </a>
   </div>
   <div class="subContenedorDos">
     <div class="picture">
@@ -1497,7 +1533,7 @@
               >
             </li>
             <li>
-              Si tienes tu crédito y aún no está ligado a tu cuenta de <br />
+              Si tienes tu crédito y aún no está ligado a tu cuenta de <br class="hidden-xs" />
               Coppel.com,
               <a
                 href="/UserRegistrationForm?editRegistration=Y&catalogId=10051&langId=-5&storeId=10151&userRegistrationStyle=strong"
@@ -1600,7 +1636,7 @@
         <ol class="list-formating">
           <li>
             Registra tu teléfono móvil en el servicio de WhatsApp.
-            <br> Necesitarás tu número de cliente
+            <br class="hidden-xs"> Necesitarás tu número de cliente
           </li>
           <li>
             Asegúrate de:<br />
@@ -1617,12 +1653,12 @@
               "
               alt="Icono de insignia verde de WhatsApp"
             />
-            al lado del nombre <br /> del contacto.
+            al lado del nombre del contacto.
             Esto confirma que es una cuenta verificada por WhatsApp
           </li>
           <li>Abre una conversación y escríbenos “Hola”</li>
           <li>
-            Sigue las instrucciones y abona a tus cuentas con una Tarjeta <br/> de
+            Sigue las instrucciones y abona a <br class="hidden-lg">tus cuentas con una Tarjeta <br class="hidden-xs"/> de
             Débito BanCoppel
           </li>
         </ol>
