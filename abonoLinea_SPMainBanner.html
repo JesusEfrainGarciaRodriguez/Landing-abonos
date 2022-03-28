@@ -2111,5 +2111,17 @@
         event:'clicGeneral'
       });
     });
+    
+    $(" .contenido.principal .subContenedor a").on("click", function (e) {
+      console.log("Botón iniciar sesión");
+      let btnLoguin="Coppel.com -"+$(this).text();
+      dataLayer.push({
+        nd1:'Landing Abonos',
+        nd2:'Abona a tu Crédito Coppel donde quieras',
+        nd3:btnLoguin,
+        nd4:'',
+        event:'clicGeneral'
+      });
+    });
   });
 </script>
