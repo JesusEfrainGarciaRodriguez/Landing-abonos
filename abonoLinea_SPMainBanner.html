@@ -496,11 +496,10 @@
   }
 
   .double_link_container {
+    margin-bottom: 17px;
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px 18px;
   }
 
   .double_link_container .card-download-link {
@@ -508,6 +507,7 @@
     display: inline-block;
     float: left;
     text-align: left;
+    margin-right: 9px;
   }
   .double_link_container .card-download-link.lastt_lnk {
     margin-right: 0px;
@@ -521,7 +521,7 @@
   .card-content-aligner.identity2 img {
     display: inline-block;
     margin: 0px;
-    height: 44px;
+    width: 150px;
   }
 
   .doublecard .card:first-of-type {
@@ -861,7 +861,7 @@
     margin-bottom: 12px;
   }
   .subTituloCuerpo.cp2 {
-    margin: 18px 0px 12px 0px;
+    margin: 6px 0px 12px 0px;
   }
   .cuerpo .card.lasttcard .list-formating li .hidden-lg {
     display: none;
@@ -1279,8 +1279,9 @@
       width: 100%;
     }
     .card-content-aligner.identity2 img {
+      width: 116.5px;
       display: block;
-      margin: auto auto 8px auto;
+      margin: auto auto 11px auto;
     }
 
     .cuerpo .card .boton-whats {
@@ -1914,6 +1915,7 @@
 <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-messaging.js"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
   var scrollToTopBtn = document.getElementById("js-cd-top");
   var rootElement = document.documentElement;
 
@@ -2051,13 +2053,12 @@
       } else {
         console.log("push1");
         dataLayer.push({
-          nd1: "Landing Abonos",
+         nd1: "Landing Abonos",
           nd2: "Otras formas de abonar",
           nd3: $(this).text().replace("<br/>", ""),
           nd4: "",
           event: "clicGeneral",
         });
-
         $(".cuerpoDos .radio_acordion").removeClass("checcked");
         radio_acordion.addClass("checcked");
       }
@@ -2066,6 +2067,18 @@
       } else {
         $(".card.accordion").removeClass("openborder");
       }
+    });
+
+    $(".contenidoFooter .footer a").on("click", function (e) {
+      console.log("footer");
+      let opcionSeleccionado="Menú inferior -"+ $(this).text();
+      dataLayer.push({
+        nd1:'Landing Abonos',
+        nd2:opcionSeleccionado,
+        nd3:'',
+        nd4:'',
+        event:'clicGeneral'
+      });
     });
   });
 </script>
