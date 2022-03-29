@@ -172,7 +172,6 @@
   }
   .card.accordion {
     padding: 0;
-    margin: 0px 8px;
   }
   .cuerpoDos .card h3 {
     text-align: center;
@@ -385,6 +384,9 @@
     margin-right: 0px;
     position: initial;
     width: 10px;
+    height: 20px;
+    display: flex;
+    align-items: center;
   }
   .cuerpoDos .ac-container input.checcked + label {
     color: #005491;
@@ -392,9 +394,10 @@
     padding: 18px 11px 28px 15px;
   }
 
-  .label-telecom{
-    color: #0058a6 !important;
+  .ac-container .ac-large {
+    /* padding-bottom: 32px; */
   }
+
   .card.accordion.openborder {
     border-top: 6px solid #fddd2e;
   }
@@ -715,7 +718,7 @@
   }
 
   .ac-container input.checcked ~ article {
-    padding: 0px 8px 32px 8px;
+    padding: 0px 12px 32px 8px;
   }
   .ac-container .cont-ac1 input.checcked ~ article {
     padding: 0px 16px 32px 9px;
@@ -850,10 +853,10 @@
     align-items: baseline;
   }
   .cuerpoTres {
-    margin: 0px 8px 40px 8px;
+    margin: 0px 3px 40px 8px;
   }
   .icono.card-beneficios-img {
-    width: 45px;
+    width: 43.13px;
   }
   .subTituloCuerpo {
     padding: 0 16px;
@@ -926,6 +929,12 @@
       width: 45px;
       margin-right: 10px;
       align-items: baseline;
+    }
+    .card.accordion {
+      margin: 0px 3px 8px 8px;
+    }
+    .cuerpoDos .ac-container div:nth-child(4) .card-link-format {
+      color: #006fb9 !important;
     }
   }
   @media only screen and (min-width: 768px) {
@@ -1028,6 +1037,10 @@
       border-radius: 0;
     }
 
+    .cuerpoDos .ac-container input.checcked + label.label-telecomm {
+      color: #0058a6;
+    }
+
     .cuerpoDos .list-formating li,
     .cuerpo .list-formating li {
       color: #212121;
@@ -1044,6 +1057,8 @@
 
     .ac-container label::after {
       font-size: 20px;
+      width: 12px !important;
+      height: 12px !important;
     }
 
     .ac-container .cont-ac1 input.checcked ~ article {
@@ -1779,7 +1794,7 @@
             </ol>
 
             <p class="card-full-message">
-              ¡Listo tu abono se refleja al instante!
+              ¡Listo, tu abono se refleja al instante!
             </p>
           </article>
         </div>
@@ -1809,10 +1824,10 @@
             class="radio_acordion"
             type="radio"
           />
-          <label for="ac-4" class="lblnm label-telecom">Telecomm</label>
+          <label for="ac-4" class="lblnm label-telecomm">Telecomm</label>
           <article class="ac-large">
             <ol class="list-formating">
-              <li style="margin-right: 17px;">
+              <li style="margin-right: 18px;">
                 <a
                   href="https://www.google.com/maps/search/telecomm+telegrafos"
                   class="card-link-format labonos-telecomm-ubicaAqui"
@@ -1843,11 +1858,11 @@
                   >Ubica aquí tu tienda Oxxo más cercana</a
                 >
               </li>
-              <li style="margin-right: 14px;">
+              <li style="margin-right: 15px;">
                 Menciona en caja que quieres pagar tu Crédito Coppel e indica tu
                 número de cliente
               </li>
-              <li style="margin-right: 1px;">
+              <li style="margin-right: 2px;">
                 Paga en efectivo la cantidad de tu abono más una comisión de
                 $13. Puedes hacer pagos desde $100 y hasta $10,000
                 <span class="card-subtext-format">
