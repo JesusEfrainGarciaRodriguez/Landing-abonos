@@ -2117,7 +2117,7 @@
 
     $(".contenidoFooter .footer a").on("click", function (e) {
       console.log("footer");
-      let opcionSeleccionado="Menú inferior -"+ $(this).text();
+      let opcionSeleccionado="Menú inferior -"+ $(this).text().replace(/^\s+|\s+$/gm,'');
       dataLayer.push({
         nd1:'Landing Abonos',
         nd2:opcionSeleccionado,
@@ -2129,7 +2129,7 @@
     
     $(" .contenido.principal .subContenedor a").on("click", function (e) {
       console.log("Botón iniciar sesión");
-      let btnLoguin="Coppel.com -"+$(this).text();
+      let btnLoguin="Coppel.com -"+$(this).text().replace(/^\s+|\s+$/gm,'');
       dataLayer.push({
         nd1:'Landing Abonos',
         nd2:'Abona a tu Crédito Coppel donde quieras',
