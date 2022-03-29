@@ -1664,8 +1664,7 @@
             </a>
             <a
               href="https://appgallery7.huawei.com/#/app/C100930013"
-              class="card-download-link lastt_lnk"
-            >
+              class="card-download-link lastt_lnk">
               <img
                 class="quitarPadding lazyImg noMargingBottom"
                 src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
@@ -2026,19 +2025,29 @@
       });
     });
 
-    $(".cuerpo a").on("click", function (e) {
+    $(".contenedorCuerpos .cuerpoCoppel  .card.esspecial  a").on("click", function (e) {
       console.log("push5");
-      var nn = $(this).parents(".card").find("h3").text();
-      if ($(this).hasClass("card-download-link")) {
-        nn += " - " + $(this).find("img").attr("alt");
-      } else {
-        nn += " - " + $(this).text();
-      }
-      nn.replace("<br/>", "");
+      let nn="Coppel.com - "+$(this).text().replace(/^\s+|\s+$/gm,'');
       dataLayer.push({
         nd1: "Landing Abonos",
         nd2: "Sigue estos pasos para abonar en:",
         nd3: nn,
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".contenedorCuerpos .cuerpo a").on("click", function (e) {
+      console.log("push cuerpo dos");
+      let mensaje="Coppel.com - ";
+      let nn= mensaje +$(this).text().replace(/^\s+|\s+$/gm,'');
+      if ($(this).hasClass("card-download-link")) {
+        nn +=  $(this).find("img").attr("alt");
+      } 
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Sigue estos pasos para abonar en:",
+        nd3:  nn,
         nd4: "",
         event: "clicGeneral",
       });
@@ -2050,15 +2059,7 @@
         nd1: "Landing Abonos",
         nd2: "Otras formas de abonar",
         nd3:
-          $(this)
-            .parent()
-            .parent()
-            .parent()
-            .parent()
-            .find("label.lblnm")
-            .text()
-            .replace("<br/>", "") +
-          " - " +
+          "Coppel.com - " +
           $(this).text().replace("<br/>", ""),
         nd4: "",
         event: "clicGeneral",
@@ -2084,7 +2085,7 @@
       dataLayer.push({
         nd1: "Landing Abonos",
         nd2: "Pagar a tiempo tiene grandes beneficios para ti",
-        nd3: $(this).text().replace("<br/>", ""),
+        nd3: $(this).text().replace(/^\s+|\s+$/gm,''),
         nd4: "",
         event: "clicGeneral",
       });
@@ -2129,7 +2130,7 @@
     
     $(" .contenido.principal .subContenedor a").on("click", function (e) {
       console.log("Botón iniciar sesión");
-      let btnLoguin="Coppel.com -"+$(this).text().replace(/^\s+|\s+$/gm,'');
+      let btnLoguin="Coppel.com - "+$(this).text().replace(/^\s+|\s+$/gm,'');
       dataLayer.push({
         nd1:'Landing Abonos',
         nd2:'Abona a tu Crédito Coppel donde quieras',
@@ -2139,4 +2140,6 @@
       });
     });
   });
-</script>
+
+  
+  </script>
