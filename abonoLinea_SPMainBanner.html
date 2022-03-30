@@ -2097,10 +2097,12 @@
 
     $(".cuerpoTres a").on("click", function (e) {
       console.log("push2");
+      let mensajeCoppel=$(this).text().replace(/(\r\n|\n|\r)/gm, '');
+      mensajeCoppel.replace(/^\s+|\s+$/gm,'');
       dataLayer.push({
         nd1: "Landing Abonos",
         nd2: "Pagar a tiempo tiene grandes beneficios para ti",
-        nd3: $(this).text().replace(/^\s+|\s+$/gm,''),
+        nd3: mensajeCoppel,
         nd4: "",
         event: "clicGeneral",
       });
@@ -2133,7 +2135,7 @@
 
     $(".contenidoFooter .footer a").on("click", function (e) {
       console.log("footer");
-      let opcionSeleccionado="Menú inferior -"+ $(this).text().replace(/^\s+|\s+$/gm,'');
+      let opcionSeleccionado="Menú inferior - "+ $(this).text().replace(/^\s+|\s+$/gm,'');
       dataLayer.push({
         nd1:'Landing Abonos',
         nd2:opcionSeleccionado,
@@ -2145,11 +2147,12 @@
     
     $(" .contenido.principal .subContenedor a").on("click", function (e) {
       console.log("Botón iniciar sesión");
-      let btnLoguin="Coppel.com - "+$(this).text().replace(/^\s+|\s+$/gm,'');
+
+      let btnLoguin=$(this).text().replace(/^\s+|\s+$/gm,'');
       dataLayer.push({
         nd1:'Landing Abonos',
         nd2:'Abona a tu Crédito Coppel donde quieras',
-        nd3:btnLoguin,
+        nd3:"Coppel.com - " + btnLoguin,
         nd4:'',
         event:'clicGeneral'
       });
