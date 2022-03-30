@@ -1,0 +1,187 @@
+<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-messaging.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  var scrollToTopBtn = document.getElementById("js-cd-top");
+  var rootElement = document.documentElement;
+
+  function scrollToTop() {
+    // Scroll to top logic
+    rootElement.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+  scrollToTopBtn.addEventListener("click", scrollToTop);
+
+  var messaging;
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBgDW1KTrEeS8mdFgNpWfiZhCpZhGs45lU",
+    authDomain: "app-coppel.firebaseapp.com",
+    databaseURL: "https://app-coppel.firebaseio.com",
+    projectId: "app-coppel",
+    storageBucket: "app-coppel.appspot.com",
+    messagingSenderId: "692777122126",
+    appId: "1:692777122126:web:feba06cf0308d645a0861f",
+    measurementId: "G-RM000QBBJG",
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  /* Validar si está disponible la librería de firebase */
+  if (typeof firebase != "undefined") {
+    console.log("const messaging = firebase.messaging();");
+    messaging = firebase.messaging();
+    messaging.usePublicVapidKey(appPublicKey);
+  }
+</script>
+<script>
+  $(document).ready(function () {
+    dataLayer.push({
+      page: "/landing-abonos",
+      title: "Landing abonos",
+      event: "pvlandingGeneral",
+    });
+
+    $(".tlogo_coppel").on("click", function (e) {
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Logo Coppel",
+        nd3: "",
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".tbtn_regresar").on("click", function (e) {
+      console.log("push6");
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Volver a Coppel.com",
+        nd3: "",
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".contenedorCuerpos .cuerpoCoppel  .card.esspecial  a").on("click", function (e) {
+      console.log("push5");
+      let nn="Coppel.com - "+$(this).text().replace(/^\s+|\s+$/gm,'');
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Sigue estos pasos para abonar en:",
+        nd3: nn,
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".contenedorCuerpos .cuerpo a").on("click", function (e) {
+      console.log("push cuerpo dos");
+      let mensaje="Coppel.com - ";
+      let nn= mensaje +$(this).text().replace(/^\s+|\s+$/gm,'');
+      if ($(this).hasClass("card-download-link")) {
+        nn +=  $(this).find("img").attr("alt");
+      } 
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Sigue estos pasos para abonar en:",
+        nd3:  nn,
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".cuerpoDos .card article a").on("click", function (e) {
+      console.log("push4");
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Otras formas de abonar",
+        nd3:
+          "Coppel.com - " +
+          $(this).text().replace("<br/>", ""),
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".cuerpoDos .card.noMobile a").on("click", function (e) {
+      var nn = $(this).parents(".card").find("h3").text();
+      nn += " - " + $(this).text();
+      nn.replace("<br/>", "");
+      console.log("push3");
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Otras formas de abonar",
+        nd3: nn,
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".cuerpoTres a").on("click", function (e) {
+      console.log("push2");
+      let mensajeCoppel=$(this).text().replace(/(\r\n|\n|\r)/gm, '');
+      mensajeCoppel.replace(/^\s+|\s+$/gm,'');
+      dataLayer.push({
+        nd1: "Landing Abonos",
+        nd2: "Pagar a tiempo tiene grandes beneficios para ti",
+        nd3: mensajeCoppel,
+        nd4: "",
+        event: "clicGeneral",
+      });
+    });
+
+    $(".cuerpoDos .lblnm").on("click", function (e) {
+      var radio_acordion = $(this).parent().find(".radio_acordion");
+
+      e.preventDefault();
+      if (radio_acordion.hasClass("checcked")) {
+        radio_acordion.removeClass("checcked");
+      } else {
+        console.log("push1");
+        dataLayer.push({
+         nd1: "Landing Abonos",
+          nd2: "Otras formas de abonar",
+          nd3: $(this).text().replace("<br/>", ""),
+          nd4: "",
+          event: "clicGeneral",
+        });
+        $(".cuerpoDos .radio_acordion").removeClass("checcked");
+        radio_acordion.addClass("checcked");
+      }
+      if ($(".radio_acordion.checcked").length > 0) {
+        $(".card.accordion").addClass("openborder");
+      } else {
+        $(".card.accordion").removeClass("openborder");
+      }
+    });
+
+    $(".contenidoFooter .footer a").on("click", function (e) {
+      console.log("footer");
+      let opcionSeleccionado="Menú inferior - "+ $(this).text().replace(/^\s+|\s+$/gm,'');
+      dataLayer.push({
+        nd1:'Landing Abonos',
+        nd2:opcionSeleccionado,
+        nd3:'',
+        nd4:'',
+        event:'clicGeneral'
+      });
+    });
+    
+    $(" .contenido.principal .subContenedor a").on("click", function (e) {
+      console.log("Botón iniciar sesión");
+
+      let btnLoguin=$(this).text().replace(/^\s+|\s+$/gm,'');
+      dataLayer.push({
+        nd1:'Landing Abonos',
+        nd2:'Abona a tu Crédito Coppel donde quieras',
+        nd3:"Coppel.com - " + btnLoguin,
+        nd4:'',
+        event:'clicGeneral'
+      });
+    });
+  }); 
+  </script>
