@@ -80,7 +80,8 @@
 
     $(".contenedorCuerpos .cuerpo a").on("click", function (e) {
       console.log("push cuerpo dos");
-      let mensaje="Coppel.com - ";
+      let titulo = $(this).closest('.card').children('h3').text();
+      let mensaje= `${titulo} - `;
       let nn= mensaje +$(this).text().replace(/^\s+|\s+$/gm,'');
       if ($(this).hasClass("card-download-link")) {
         nn +=  $(this).find("img").attr("alt");
@@ -96,11 +97,12 @@
 
     $(".cuerpoDos .card article a").on("click", function (e) {
       console.log("push4");
+      let titulo = $(this).closest('div').children('label').text();
       dataLayer.push({
         nd1: "Landing Abonos",
         nd2: "Otras formas de abonar",
         nd3:
-          "Coppel.com - " +
+          titulo + " - " +
           $(this).text().replace("<br/>", ""),
         nd4: "",
         event: "clicGeneral",
@@ -183,5 +185,7 @@
         event:'clicGeneral'
       });
     });
-  }); 
+  });
+
+  
   </script>
