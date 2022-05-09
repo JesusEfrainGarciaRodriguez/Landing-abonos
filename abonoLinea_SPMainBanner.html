@@ -904,14 +904,80 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     place-items: center;
-    row-gap: 60px;
+    row-gap: 15px;
+    padding: 0;
   }
   #modal-red-efectiva .modal-content .modal-body .supermercado {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    min-height: 135px;
+    min-height: 165px;
+    width: 100%;
+    height: 100%;
+  }
+  #modal-red-efectiva .modal-content .modal-body .supermercado .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  #modal-red-efectiva .modal-content .modal-body .seven-eleven {
+    width: 81.03px;
+    height: 84.1px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .calimax {
+    width: 153.94px;
+    height: 42.84px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .chedraui {
+    width: 109.18px;
+    height: 82.46px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .circlek {
+    width: 153.84px;
+    height: 60.6px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .extra {
+    width: 153.97px;
+    height: 69.84px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .farmaciasAhorro {
+    width: 154px;
+    height: 58.04px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .superFarmacia {
+    width: 153.78px;
+    height: 62.11px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .farmaciaMasBarata {
+    width: 108.77px;
+    height: 103.1px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .roma {
+    width: 145.82px;
+    height: 84.53px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .yza {
+    width: 154.2px;
+    height: 71.1px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .kiosko {
+    width: 152.11px;
+    height: 91.11px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .ley {
+    width: 153.99px;
+    height: 90.07px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .heb {
+    width: 154px;
+    height: 49.3px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .walmart {
+    width: 153.84px;
+    height: 33.58px;
   }
   /* End - Modal red efectiva */
   @media only screen and (max-width: 767px) {
@@ -1889,7 +1955,7 @@
             type="radio"
           />
           <label for="ac-5" class="lblnm">Pago en tienda Oxxo</label>
-          <article class="ac-medium lastt">
+          <article class="ac-medium">
             <ol class="list-formating">
               <li>
                 <a
@@ -2046,64 +2112,95 @@
 <div id="modal-red-efectiva" class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-close" onclick="$('#modal-red-efectiva').hide();">
-        <img class="modal-close-img" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/Close.svg" alt="Cerrar Supermecados y más"/>
+      <div class="modal-close">
+        <img class="modal-close-img" 
+          onclick="$('#modal-red-efectiva').hide();" 
+          src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/Close.svg" 
+          alt="Cerrar Supermecados y más"/>
       </div>
       <div class="modal-body">
         <div class="supermercado">
-          <img class="seven-eleven" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/seven-eleven.svg" alt="Seven Eleven">
+          <div class="img-container">
+            <img class="seven-eleven" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/seven-eleven.svg" alt="Seven Eleven">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="calimax" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/calimax.svg" alt="Calimax">
+          <div class="img-container">
+            <img class="calimax" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/calimax.svg" alt="Calimax">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="chedraui" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/chedraui.svg" alt="Chedraui">
+          <div class="img-container">
+            <img class="chedraui" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/chedraui.svg" alt="Chedraui">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="circlek" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/circlek.svg" alt="Circle K">
+          <div class="img-container">
+            <img class="circlek" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/circlek.svg" alt="Circle K">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="extra" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/extra.svg" alt="Extra">
+          <div class="img-container">
+            <img class="extra" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/extra.svg" alt="Extra">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="farmaciasAhorro" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/farmaciasAhorro.svg" alt="Farmacias del ahorro">
+          <div class="img-container">
+            <img class="farmaciasAhorro" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/farmaciasAhorro.svg" alt="Farmacias del ahorro">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="superFarmacia" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/superFarmacia.svg" alt="Super farmacia">
+          <div class="img-container">
+            <img class="superFarmacia" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/superFarmacia.svg" alt="Super farmacia">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="farmaciaMasBarata" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/farmaciaMasBarata.svg" alt="Farmacia la más barata">
+          <div class="img-container">
+            <img class="farmaciaMasBarata" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/farmaciaMasBarata.svg" alt="Farmacia la más barata">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="roma" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/roma.svg" alt="Roma">
+          <div class="img-container">
+            <img class="roma" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/roma.svg" alt="Roma">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="yza" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/yza.svg" alt="Yza farmacias">
+          <div class="img-container">
+           <img class="yza" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/yza.svg" alt="Yza farmacias">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="kiosko" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/kiosko.svg" alt="Kiosko">
+          <div class="img-container">
+            <img class="kiosko" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/kiosko.svg" alt="Kiosko">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="ley" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/ley.svg" alt="Ley">
+          <div class="img-container">
+            <img class="ley" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/ley.svg" alt="Ley">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="heb" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/heb.svg" alt="HEB">
+          <div class="img-container">
+            <img class="heb" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/heb.svg" alt="HEB">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
-          <img class="walmart" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/walmart.svg" alt="Walmart">
+          <div class="img-container">
+            <img class="walmart" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/walmart.svg" alt="Walmart">
+          </div>
           <a class="card-link-format">Ubica tu sucursal</a>
         </div>
       </div>
