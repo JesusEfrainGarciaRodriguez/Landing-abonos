@@ -873,6 +873,47 @@
   .cuerpo .card.lasttcard .list-formating li .hidden-lg {
     display: none;
   }
+  /* Start - Modal red efectiva */
+  #modal-red-efectiva {
+    background-color: rgba(33,33,33,.64);
+  }
+  #modal-red-efectiva .modal-dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 1138px;
+    width: 100%;
+    min-height: 614.25px;
+  }
+  #modal-red-efectiva .modal-content {
+    min-height: 614.25px;
+  }
+  #modal-red-efectiva .modal-content .modal-close {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 22px 22px 0 0;
+  }
+  #modal-red-efectiva .modal-content .modal-close .modal-close-img {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
+  #modal-red-efectiva .modal-content .modal-body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    row-gap: 60px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .supermercado {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 135px;
+  }
+  /* End - Modal red efectiva */
   @media only screen and (max-width: 767px) {
     .cuerpoCoppel .card {
       padding: 24px 16px;
@@ -1886,6 +1927,7 @@
               <li style="margin-right: 5px;">
                 <span
                   class="card-link-format labonos-oxxo-ubicaAqui"
+                  onclick="$('#modal-red-efectiva').show();"
                   >Ubica en el mapa tu tienda más cercana.</span
                 >
                 Elige entre farmacias, supermercados y tiendas de conveniencia.
@@ -2000,6 +2042,75 @@
     <p>2022 © Coppel todos los derechos reservados</p>
   </div>
 </div>
+
+<div id="modal-red-efectiva" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-close" onclick="$('#modal-red-efectiva').hide();">
+        <img class="modal-close-img" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/Close.svg" alt="Cerrar Supermecados y más"/>
+      </div>
+      <div class="modal-body">
+        <div class="supermercado">
+          <img class="seven-eleven" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/seven-eleven.svg" alt="Seven Eleven">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="calimax" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/calimax.svg" alt="Calimax">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="chedraui" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/chedraui.svg" alt="Chedraui">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="circlek" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/circlek.svg" alt="Circle K">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="extra" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/extra.svg" alt="Extra">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="farmaciasAhorro" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/farmaciasAhorro.svg" alt="Farmacias del ahorro">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="superFarmacia" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/superFarmacia.svg" alt="Super farmacia">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="farmaciaMasBarata" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/farmaciaMasBarata.svg" alt="Farmacia la más barata">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="roma" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/roma.svg" alt="Roma">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="yza" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/yza.svg" alt="Yza farmacias">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="kiosko" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/kiosko.svg" alt="Kiosko">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="ley" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/ley.svg" alt="Ley">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="heb" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/heb.svg" alt="HEB">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <img class="walmart" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/walmart.svg" alt="Walmart">
+          <a class="card-link-format">Ubica tu sucursal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-messaging.js"></script>
 <script>
