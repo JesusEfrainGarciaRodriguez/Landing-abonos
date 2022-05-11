@@ -885,9 +885,11 @@
     max-width: 1138px;
     width: 100%;
     min-height: 614.25px;
+    padding: 8px;
   }
   #modal-red-efectiva .modal-content {
-    min-height: 614.25px;
+    max-height: 98vh;
+    overflow: auto;
   }
   #modal-red-efectiva .modal-content .modal-close {
     display: flex;
@@ -902,10 +904,11 @@
   }
   #modal-red-efectiva .modal-content .modal-body {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     place-items: center;
     row-gap: 15px;
     padding: 0;
+    margin-bottom: 37px;
   }
   #modal-red-efectiva .modal-content .modal-body .supermercado {
     display: flex;
@@ -1042,6 +1045,74 @@
     .cuerpoDos .ac-container div:nth-child(4) .card-link-format {
       color: #006fb9 !important;
     }
+    /* Start - Modal red efectiva */
+    #modal-red-efectiva .modal-content .modal-body {
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      margin-bottom: 40px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .supermercado {
+      min-height: 118px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .card-link-format {
+      font-size: 12px!important;
+    }
+    #modal-red-efectiva .modal-content .modal-body .seven-eleven {
+      max-width: 61.66px;
+      max-height: 64px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .calimax {
+      max-width: 84px;
+      max-height: 22.83px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .chedraui {
+      max-width: 81.22px;
+      max-height: 61.34px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .circlek {
+      max-width: 84px;
+      max-height: 35px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .extra {
+      max-width: 84px;
+      max-height: 38.1px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .farmaciasAhorro {
+      max-width: 84px;
+      max-height: 31.66px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .superFarmacia {
+      max-width: 84.07px;
+      max-height: 33.95px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .farmaciaMasBarata {
+      max-width: 82.3px;
+      max-height: 78.01px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .roma {
+      max-width: 85.33px;
+      max-height: 49.46px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .yza {
+      max-width: 83.95px;
+      max-height: 38.71px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .kiosko {
+      max-width: 83.21px;
+      max-height: 49.91px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .ley {
+      max-width: 83.85px;
+      max-height: 49.04px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .heb {
+      max-width: 84px;
+      max-height: 26.89px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .walmart {
+      max-width: 84px;
+      max-height: 18.33px;
+    }
+    /* End - Modal red efectiva */
   }
   @media only screen and (min-width: 768px) {
    /* .card-beneficios-text-container p {
