@@ -2071,10 +2071,11 @@
           <article class="ac-medium lastt">
             <ol class="list-formating">
               <li style="margin-right: 5px;">
-                <button
+                <a
                   class="card-link-format"
                   onclick="$('#modal-red-efectiva').show();"
-                  >Ubica en el mapa tu tienda más cercana.</button
+                  href="javascript:void(0)"
+                  >Ubica en el mapa tu tienda más cercana.</a
                 >
                 Elige entre farmacias, supermercados y tiendas de conveniencia.
               </li>
@@ -2386,7 +2387,7 @@ crossorigin="anonymous"></script>
       });
     });
 
-    $(".cuerpoDos .card article a, .cuerpoDos .card article button").on("click", function (e) {
+    $(".cuerpoDos .card article a").on("click", function (e) {
       console.log("push4");
       let titulo = $(this).closest('div').children('label').text();
       dataLayer.push({
