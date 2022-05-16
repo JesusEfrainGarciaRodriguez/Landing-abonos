@@ -2072,6 +2072,7 @@
             <ol class="list-formating">
               <li style="margin-right: 5px;">
                 <a
+                  id="btn-open-modal-red"
                   class="card-link-format"
                   onclick="$('#modal-red-efectiva').show();"
                   href="javascript:void(0)"
@@ -2226,37 +2227,37 @@
         </div>
         <div class="supermercado">
           <div class="img-container">
-            <img class="extra" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/extra.svg" alt="Extra">
+            <img class="extra" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/extra.svg" alt="extra">
           </div>
           <a href="https://www.google.com.mx/maps/search/extra/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
           <div class="img-container">
-            <img class="farmaciasAhorro" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/farmaciasAhorro.svg" alt="Farmacias del ahorro">
+            <img class="farmaciasAhorro" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/farmaciasAhorro.svg" alt="Farmacias del Ahorro">
           </div>
           <a href="https://www.google.com.mx/maps/search/Farmacias+del+Ahorro/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
           <div class="img-container">
-            <img class="superFarmacia" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/superFarmacia.svg" alt="Super farmacia">
+            <img class="superFarmacia" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/superFarmacia.svg" alt="Super Farmacia">
           </div>
           <a href="https://www.google.com.mx/maps/search/Super+Farmacia" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
           <div class="img-container">
-            <img class="farmaciaMasBarata" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/farmaciaMasBarata.svg" alt="Farmacia la más barata">
+            <img class="farmaciaMasBarata" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/farmaciaMasBarata.svg" alt="Far+cia La Más Barata">
           </div>
           <a href="https://www.google.com.mx/maps/search/Far%2Bcia+La+Más+Barata" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
           <div class="img-container">
-            <img class="roma" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/roma.svg" alt="Roma">
+            <img class="roma" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/roma.svg" alt="Farmacias Roma">
           </div>
           <a href="https://www.google.com.mx/maps/search/Farmacias+Roma/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
           <div class="img-container">
-           <img class="yza" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/yza.svg" alt="Yza farmacias">
+           <img class="yza" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/yza.svg" alt="Farmacias yza">
           </div>
           <a href="https://www.google.com.mx/maps/search/Farmacias+yza/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
         </div>
@@ -2268,13 +2269,13 @@
         </div>
         <div class="supermercado">
           <div class="img-container">
-            <img class="ley" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/ley.svg" alt="Ley">
+            <img class="ley" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/ley.svg" alt="Supermercado Ley">
           </div>
           <a href="https://www.google.com.mx/maps/search/Supermercado+Ley/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
           <div class="img-container">
-            <img class="heb" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/heb.svg" alt="HEB">
+            <img class="heb" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/heb.svg" alt="Supermercado H-E-B">
           </div>
           <a href="https://www.google.com.mx/maps/search/Supermercado+H-E-B/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
         </div>
@@ -2464,6 +2465,18 @@ crossorigin="anonymous"></script>
       });
     });
 
+    // Al abrir modal red efectiva
+    $("#btn-open-modal-red").on("click", function () {
+      dataLayer.push({
+        nd1:'Landing Abonos',
+        nd2:'Modal Supermecados y más',
+        nd3: '',
+        nd4:'',
+        event:'abonosGeneral'
+      });
+    });
+
+    // Links ubica tu sucursal
     $("#modal-red-efectiva .supermercado a").on("click", function (e) {
       const sucursal = $(this).prev().children("img").attr("alt");
       dataLayer.push({
