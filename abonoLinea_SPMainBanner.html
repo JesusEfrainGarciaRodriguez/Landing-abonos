@@ -2071,10 +2071,10 @@
           <article class="ac-medium lastt">
             <ol class="list-formating">
               <li style="margin-right: 5px;">
-                <span
-                  class="card-link-format labonos-oxxo-ubicaAqui"
+                <button
+                  class="card-link-format"
                   onclick="$('#modal-red-efectiva').show();"
-                  >Ubica en el mapa tu tienda más cercana.</span
+                  >Ubica en el mapa tu tienda más cercana.</button
                 >
                 Elige entre farmacias, supermercados y tiendas de conveniencia.
               </li>
@@ -2201,7 +2201,7 @@
       <div class="modal-body">
         <div class="supermercado">
           <div class="img-container">
-            <img class="seven-eleven" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/seven-eleven.svg" alt="Seven Eleven">
+            <img class="seven-eleven" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/seven-eleven.svg" alt="7 Eleven">
           </div>
           <a href="https://www.google.com.mx/maps/search/seven+Eleven/" target="_blank" class="link">Ubica tu sucursal</a>
         </div>
@@ -2245,7 +2245,7 @@
           <div class="img-container">
             <img class="farmaciaMasBarata" src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/farmaciaMasBarata.svg" alt="Farmacia la más barata">
           </div>
-          <a href="https://www.google.com.mx/maps/search/Farmacia+La+M%C3%A1s+Barata" target="_blank" class="link">Ubica tu sucursal</a>
+          <a href="https://www.google.com.mx/maps/search/Far%2Bcia+la+mas+barata" target="_blank" class="link">Ubica tu sucursal</a>
         </div>
         <div class="supermercado">
           <div class="img-container">
@@ -2385,7 +2385,7 @@
       });
     });
 
-    $(".cuerpoDos .card article a").on("click", function (e) {
+    $(".cuerpoDos .card article a, .cuerpoDos .card article button").on("click", function (e) {
       console.log("push4");
       let titulo = $(this).closest('div').children('label').text();
       dataLayer.push({
@@ -2394,20 +2394,6 @@
         nd3:
           titulo + " - " +
           $(this).text().replace("<br/>", ""),
-        nd4: "",
-        event: "clicGeneral",
-      });
-    });
-
-    $(".cuerpoDos .card.noMobile a").on("click", function (e) {
-      var nn = $(this).parents(".card").find("h3").text();
-      nn += " - " + $(this).text();
-      nn.replace("<br/>", "");
-      console.log("push3");
-      dataLayer.push({
-        nd1: "Landing Abonos",
-        nd2: "Otras formas de abonar",
-        nd3: nn,
         nd4: "",
         event: "clicGeneral",
       });
@@ -2471,6 +2457,17 @@
         nd1:'Landing Abonos',
         nd2:'Abona a tu Crédito Coppel donde quieras',
         nd3:"Coppel.com - " + btnLoguin,
+        nd4:'',
+        event:'clicGeneral'
+      });
+    });
+
+    $("#modal-red-efectiva .supermercado a").on("click", function (e) {
+      const sucursal = $(this).prev().children("img").attr("alt");
+      dataLayer.push({
+        nd1:'Landing Abonos',
+        nd2:'Modal Supermecados y más',
+        nd3: `${sucursal} - Ubica tu sucursal aqui`,
         nd4:'',
         event:'clicGeneral'
       });
