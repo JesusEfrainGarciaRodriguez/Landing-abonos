@@ -132,7 +132,7 @@
               <img
                 class="quitarPadding lazyImg"
                 src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
-                data-original="https://cdn2.coppel.com/images/emarketing/abonos/Logo-Badge-Play-store.svg"
+                data-original="https://cdn2.coppel.com/images/emarketing/abonos/logo-badge-play-store.svg"
                 alt="Descarga desde google play"
               />
             </a>
@@ -143,7 +143,7 @@
               <img
                 class="quitarPadding lazyImg"
                 src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
-                data-original="https://cdn2.coppel.com/images/emarketing/abonos/Logo-Badge-App-store.svg"
+                data-original="https://cdn2.coppel.com/images/emarketing/abonos/logo-badge-app-store.svg"
                 alt="Descarga desde app store"
               />
             </a>
@@ -153,7 +153,7 @@
               <img
                 class="quitarPadding lazyImg noMargingBottom"
                 src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
-                data-original="https://cdn2.coppel.com/images/emarketing/abonos/Logo-Badge-App-Gallery.svg"
+                data-original="https://cdn2.coppel.com/images/emarketing/abonos/logo-badge-app-gallery.svg"
                 alt="Descarga desde AppGallery"
               />
             </a>
@@ -318,7 +318,7 @@
             type="radio"
           />
           <label for="ac-5" class="lblnm">Pago en tienda Oxxo</label>
-          <article class="ac-medium lastt">
+          <article class="ac-medium">
             <ol class="list-formating">
               <li>
                 <a
@@ -338,6 +338,38 @@
                 <span class="card-subtext-format">
                   Recuerda que primero usaremos tu dinero para pagar tus cuentas
                   vencidas y luego se distribuirá en las demás cuentas
+                </span>
+              </li>
+            </ol>
+          </article>
+        </div>
+        <div>
+          <input
+            id="ac-6"
+            name="accordion-1"
+            class="radio_acordion"
+            type="radio"
+          />
+          <label for="ac-5" class="lblnm">Supermercados y más</label>
+          <article class="ac-medium lastt">
+            <ol class="list-formating">
+              <li style="margin-right: 5px;">
+                <a
+                  id="btn-open-modal-red"
+                  class="card-link-format"
+                  onclick="$('#modal-red-efectiva').show();"
+                  href="javascript:void(0)"
+                  >Ubica en el mapa tu tienda más cercana.</a
+                >
+                Elige entre farmacias, supermercados y tiendas de conveniencia.
+              </li>
+              <li style="margin-right: 15px;">
+                Cuando estés en la tienda, di en la caja que quieres pagar tu Crédito Coppel y muestra tu número de cliente.
+              </li>
+              <li style="margin-right: 20px;">
+                Paga en efectivo la cantidad de tu abono más una comisión de $8 por la operación. Puedes hacer pagos desde $100 y hasta $10,000. 
+                <span class="card-subtext-format">
+                  Paga tu abono mensual, abono vencido, saldo total u otra cantidad. Si elijes otra cantidad, usaremos tu dinero para abonar primero al saldo vencido y luego se distribuirá a las demás cuentas. 
                 </span>
               </li>
             </ol>
@@ -439,5 +471,147 @@
       </li>
     </ul>
     <p>2022 © Coppel todos los derechos reservados</p>
+  </div>
+</div>
+
+<div id="modal-red-efectiva" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-close">
+        <img class="modal-close-img lazyImg" 
+          onclick="$('#modal-red-efectiva').hide();" 
+          src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+          data-original="https://cdn2.coppel.com/images/emarketing/abonos/close.svg" 
+          alt="Cerrar Supermecados y más"/>
+      </div>
+      <div class="modal-body">
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="seven-eleven lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/seven-eleven.svg" 
+              alt="7 Eleven">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Seven+Eleven/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="calimax lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/calimax.svg" 
+              alt="Calimax">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Calimax/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="chedraui lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/chedraui.svg" 
+              alt="Chedraui">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Chedraui/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="circlek lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/circlek.svg" 
+              alt="Circle K">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Circle+K/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="extra lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/extra.svg" 
+              alt="extra">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/extra/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="farmaciasAhorro lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/farmaciasAhorro.svg" 
+              alt="Farmacias del Ahorro">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Farmacias+del+Ahorro/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="superFarmacia lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/superFarmacia.svg" 
+              alt="Super Farmacia">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Super+Farmacia" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="farmaciaMasBarata lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/farmaciaMasBarata.svg" 
+              alt="Far+cia la más barata">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Far%2Bcia+La+Más+Barata" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="roma lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/roma.svg" 
+              alt="Roma">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Farmacias+Roma/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+           <img class="yza lazyImg" 
+            src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+            data-original="https://cdn2.coppel.com/images/emarketing/abonos/yza.svg" 
+            alt="Farmacias yza">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Farmacias+yza/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="kiosko lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/kiosko.svg" 
+              alt="Kiosko">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Kiosko/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="ley lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/ley.svg" 
+              alt="Supermercado Ley">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Supermercado+Ley/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="heb lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/heb.svg" 
+              alt="Supermercado H-E-B">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Supermercado+H-E-B/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+        <div class="supermercado">
+          <div class="img-container">
+            <img class="walmart lazyImg" 
+              src="https://cdn2.coppel.com/images/emarketing/ux/preloader.gif"
+              data-original="https://cdn2.coppel.com/images/emarketing/abonos/walmart.svg" 
+              alt="Walmart">
+          </div>
+          <a href="https://www.google.com.mx/maps/search/Walmart/" target="_blank" rel="noopener" class="link">Ubica tu sucursal</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

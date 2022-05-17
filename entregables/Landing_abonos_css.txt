@@ -25,6 +25,7 @@
     font-size: 16px !important;
     line-height: 24px;
     color: #0070bf !important;
+    cursor: pointer;
     /*font-family: "Roboto-bold";*/
   }
   .card-subtext-format {
@@ -872,6 +873,126 @@
   .cuerpo .card.lasttcard .list-formating li .hidden-lg {
     display: none;
   }
+  /* Start - Modal red efectiva */
+  #modal-red-efectiva {
+    background-color: rgba(33,33,33,.64);
+  }
+  #modal-red-efectiva .modal-dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 1138px;
+    width: 100%;
+    min-height: 614.25px;
+    padding: 8px;
+    animation: none;
+  }
+  #modal-red-efectiva .modal-content {
+    max-height: 98vh;
+    overflow: auto;
+  }
+  #modal-red-efectiva .modal-content .modal-close {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 22px 22px 0 0;
+  }
+  #modal-red-efectiva .modal-content .modal-close .modal-close-img {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
+  #modal-red-efectiva .modal-content .modal-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    place-items: center;
+    row-gap: 15px;
+    padding: 0;
+    margin-bottom: 37px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .supermercado {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 165px;
+    width: 100%;
+    height: 100%;
+  }
+  #modal-red-efectiva .modal-content .modal-body .supermercado .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  #modal-red-efectiva .modal-content .modal-body .supermercado .link {
+    color:#0072BE;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: underline;
+  }
+  #modal-red-efectiva .modal-content .modal-body .seven-eleven {
+    width: 81.03px;
+    height: 84.1px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .calimax {
+    width: 153.94px;
+    height: 42.84px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .chedraui {
+    width: 109.18px;
+    height: 82.46px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .circlek {
+    width: 153.84px;
+    height: 60.6px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .extra {
+    width: 153.97px;
+    height: 69.84px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .farmaciasAhorro {
+    width: 154px;
+    height: 58.04px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .superFarmacia {
+    width: 153.78px;
+    height: 62.11px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .farmaciaMasBarata {
+    width: 108.77px;
+    height: 103.1px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .roma {
+    width: 145.82px;
+    height: 84.53px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .yza {
+    width: 154.2px;
+    height: 71.1px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .kiosko {
+    width: 152.11px;
+    height: 91.11px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .ley {
+    width: 153.99px;
+    height: 90.07px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .heb {
+    width: 154px;
+    height: 49.3px;
+  }
+  #modal-red-efectiva .modal-content .modal-body .walmart {
+    width: 153.84px;
+    height: 33.58px;
+  }
+  /* End - Modal red efectiva */
   @media only screen and (max-width: 767px) {
     .cuerpoCoppel .card {
       padding: 24px 16px;
@@ -934,6 +1055,74 @@
     .cuerpoDos .ac-container div:nth-child(4) .card-link-format {
       color: #006fb9 !important;
     }
+    /* Start - Modal red efectiva */
+    #modal-red-efectiva .modal-content .modal-body {
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      margin-bottom: 40px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .supermercado {
+      min-height: 118px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .supermercado .link {
+      font-size: 12px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .seven-eleven {
+      max-width: 61.66px;
+      max-height: 64px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .calimax {
+      max-width: 84px;
+      max-height: 22.83px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .chedraui {
+      max-width: 81.22px;
+      max-height: 61.34px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .circlek {
+      max-width: 84px;
+      max-height: 35px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .extra {
+      max-width: 84px;
+      max-height: 38.1px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .farmaciasAhorro {
+      max-width: 84px;
+      max-height: 31.66px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .superFarmacia {
+      max-width: 84.07px;
+      max-height: 33.95px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .farmaciaMasBarata {
+      max-width: 82.3px;
+      max-height: 78.01px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .roma {
+      max-width: 85.33px;
+      max-height: 49.46px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .yza {
+      max-width: 83.95px;
+      max-height: 38.71px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .kiosko {
+      max-width: 83.21px;
+      max-height: 49.91px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .ley {
+      max-width: 83.85px;
+      max-height: 49.04px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .heb {
+      max-width: 84px;
+      max-height: 26.89px;
+    }
+    #modal-red-efectiva .modal-content .modal-body .walmart {
+      max-width: 84px;
+      max-height: 18.33px;
+    }
+    /* End - Modal red efectiva */
   }
   @media only screen and (min-width: 768px) {
    /* .card-beneficios-text-container p {
@@ -1108,6 +1297,7 @@
     .cuerpoCoppel .card {
       margin-left: 0px;
       margin-right: 0px;
+      margin-bottom: 18px;
     }
     
     .cuerpoTres .card {

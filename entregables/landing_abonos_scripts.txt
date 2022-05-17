@@ -1,4 +1,5 @@
-<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js" integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-messaging.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -109,20 +110,6 @@
       });
     });
 
-    $(".cuerpoDos .card.noMobile a").on("click", function (e) {
-      var nn = $(this).parents(".card").find("h3").text();
-      nn += " - " + $(this).text();
-      nn.replace("<br/>", "");
-      console.log("push3");
-      dataLayer.push({
-        nd1: "Landing Abonos",
-        nd2: "Otras formas de abonar",
-        nd3: nn,
-        nd4: "",
-        event: "clicGeneral",
-      });
-    });
-
     $(".cuerpoTres a").on("click", function (e) {
       console.log("push2");
       let mensajeCoppel=$(this).text().replace(/(\r\n|\n|\r)/gm, '');
@@ -185,7 +172,28 @@
         event:'clicGeneral'
       });
     });
-  });
 
-  
-  </script>
+    // Al abrir modal red efectiva
+    $("#btn-open-modal-red").on("click", function () {
+      dataLayer.push({
+        nd1:'Landing Abonos',
+        nd2:'Modal Supermercados y más',
+        nd3: '',
+        nd4:'',
+        event:'abonosGeneral'
+      });
+    });
+
+    // Links ubica tu sucursal
+    $("#modal-red-efectiva .supermercado a").on("click", function (e) {
+      const sucursal = $(this).prev().children("img").attr("alt");
+      dataLayer.push({
+        nd1:'Landing Abonos',
+        nd2:'Modal Supermercados y más',
+        nd3: `${sucursal} - Ubica tu sucursal aquí`,
+        nd4:'',
+        event:'clicGeneral'
+      });
+    });
+  });
+</script>
