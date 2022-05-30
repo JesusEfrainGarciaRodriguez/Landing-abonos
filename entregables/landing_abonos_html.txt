@@ -369,7 +369,7 @@
               <li style="margin-right: 20px;">
                 Paga en efectivo la cantidad de tu abono más una comisión de $8 por la operación. Puedes hacer pagos desde $100 y hasta $10,000. 
                 <span class="card-subtext-format">
-                  Paga tu abono mensual, abono vencido, saldo total u otra cantidad. Si elijes otra cantidad, usaremos tu dinero para abonar primero al saldo vencido y luego se distribuirá a las demás cuentas. 
+                  Puedes pagar tu atrasado, abono mensual, saldo vencido u otra cantidad. Si elijes otra cantidad, usaremos tu dinero para abonar primero al atrasado y luego se distribuirá en las demás cuentas. 
                 </span>
               </li>
             </ol>
