@@ -1,0 +1,1796 @@
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .container,
+    .rowContainer {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #header {
+        display: none;
+    }
+
+    .header-local {
+        background: #fff;
+        padding: 10px 16px;
+        position: relative;
+        z-index: 9;
+    }
+
+    .wrapper {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    .header-local .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pull-right {
+        float: right;
+    }
+
+    .header-local .pull-right {
+        margin: 10px 0 0;
+    }
+
+    .header-local a {
+        color: #337ab7;
+        text-decoration: underline;
+        font-size: 14px;
+        line-height: 33px;
+    }
+
+    .max-width {
+        width: 1170px;
+        margin: 0 auto;
+    }
+
+    .logo-coppel {
+        max-width: 160px;
+        width: 80%;
+    }
+
+    .header-local-item {
+        display: block;
+        vertical-align: top;
+    }
+
+    .main-banner {
+        grid-area: main-banner;
+        background: #006FB9;
+        width: inherit;
+        display: block;
+        grid-template-columns: 20% 30% 30% 20%;
+        grid-template-rows: 100%;
+    }
+
+    .requisitos,
+    .ventajas {
+        margin: 32px 0 0;
+        width: inherit;
+    }
+
+    .ventajas {
+        max-width: 100vw;
+        display: block;
+    }
+
+    .ventajas>* {
+        grid-column: 2;
+    }
+
+    .recibir-prestamo {
+        width: 100vw;
+        display: block;
+        margin: 24px 0 0;
+    }
+
+    .whatsapp {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px;
+        margin: 20px auto 0;
+        width: 100%;
+    }
+
+    .whatsapp #logo_whatsapp {
+        width: 100px;
+    }
+
+    .subtitle {
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        color: black;
+        margin: 0 auto 12px;
+        font-family: Circular, sans-serif;
+        text-align: center;
+    }
+
+    .main-banner-primary-text-desk-container .col-full {
+        background: #ffe143;
+        padding: 10px 12px;
+    }
+
+    .main-banner-primary-text-desk-container .col-full:last-child {
+        width: 48%;
+    }
+
+    .whatsapp .subtitle {
+        width: 100%;
+        font-size: 20px;
+        margin: 20px auto;
+    }
+
+    .whatsapp .text {
+        font-size: 16px;
+        margin-right: 0;
+        text-align: left;
+        line-height: 24px;
+        font-weight: 400;
+        margin-left: 16px;
+        width: 270px;
+    }
+
+    .whatsapp-pedir-prestamo {
+        margin: 29px 0 0;
+        text-align: left;
+    }
+
+    .main-banner a {
+        background: 0 0;
+        border: 2px solid #fff;
+        border-radius: 120px !important;
+        color: #fff;
+        font-weight: 700;
+        text-shadow: none;
+        transition-property: all;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+    }
+
+    .main-banner a:hover {
+        background-color: #fff !important;
+        color: #007dc3 !important;
+    }
+
+    .recibir-prestamo .requisitos-mas-info a {
+        display: inline-block;
+    }
+
+    .reqPrinc ul li .text-description a {
+        color: #007dc3;
+        margin-top: 10px;
+        text-decoration: underline;
+    }
+
+    .whatsapp #divBoton a {
+        text-transform: initial;
+        margin: auto;
+        width: 100%;
+        display: block;
+    }
+
+    .whatsapp #divBoton a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    .whatsapp p.text-center {
+        color: #373d3f;
+        width: 90%;
+        font-size: 17px;
+        margin: 20px auto;
+    }
+
+    .horarios {
+        grid-area: horarios;
+        display: block;
+        width: 90%;
+        margin: 28px auto 60px;
+        text-align: center;
+    }
+
+    .youtube {
+        margin: auto;
+        height: 350px;
+        width: 80%;
+        display: block;
+        border: none;
+    }
+
+    .container-local {
+        display: block;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100vw;
+        background: #fafafa;
+        -webkit-font-smoothing: antialiased;
+        font-size: 15px;
+    }
+
+    .main-banner-img-container {
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+    }
+
+    .main-banner-img-container img {
+        width: 40%;
+    }
+
+    .main-banner-primary-text {
+        background: #ffe143;
+        color: #006cba;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        font-family: "Circular", sans-serif;
+        width: 100%;
+        display: block;
+        padding: 9px 14px 16px;
+        margin-bottom: 15px;
+        line-height: 30px;
+    }
+
+    .main-banner-primary-text span {
+        color: #006cba;
+    }
+
+    .main-banner-secondary-text {
+        width: 100%;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-size: 32px;
+        text-align: center;
+        line-height: 40px;
+        text-shadow: 0 1px 0 rgb(20 20 30 / 10%);
+    }
+
+    .full-width {
+        width: 100%;
+    }
+
+    .reqPrinc {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .card {
+        box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+        background: white;
+        border-radius: 2px;
+        padding: 20px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: initial;
+    }
+
+    .reqPrinc ul li {
+        padding: 20px 0;
+        display: grid;
+        place-items: center flex-start;
+        grid-template: 10% 80% 10% / 20% 5% 72%;
+        height: 100px;
+    }
+
+    .recibir-prestamo li div {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .reqPrinc ul li .img-mask {
+        width: 100%;
+        min-height: 80px;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        place-items: flex-start center;
+        grid-row: 2;
+        grid-template: 1fr 1fr 1fr / 100%;
+    }
+
+    .reqPrinc ul li .img-mask .last {
+        width: 70%;
+    }
+
+    .reqPrinc ul li .img-mask img {
+        max-width: 80%;
+        grid-row: 2;
+    }
+
+    .reqPrinc ul li .text-description {
+        font-size: 14px;
+        margin: 0;
+        width: 100%;
+        line-height: 1.5;
+        color: #373d3f;
+        font-family: Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .requisitos-mas-info {
+        text-align: center;
+        float: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 32px auto 12px;
+        width: 100%;
+    }
+
+    .recibir-prestamo .com .requisitos-mas-info {
+        margin-bottom: 12px;
+        margin-top: 25px;
+    }
+
+    .recibir-prestamo .btn-primary,
+    .whatsapp .btn-primary {
+        background-color: #1c72b6;
+        border-color: #016db6;
+        font-size: 16px;
+        color: white;
+        border-radius: 24px;
+        padding: 10px 20px;
+        text-align: center;
+        font-weight: normal;
+        line-height: 1.4;
+        touch-action: manipulation;
+        cursor: pointer;
+        width: 100%;
+        display: block;
+    }
+
+    .ventajas .requisitos-mas-info p {
+        color: #373d3f;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .ventajas .faq-link {
+        color: #007dc3;
+    }
+
+    .recibir-prestamo .card .text-description {
+        text-align: left;
+        font-size: 15px;
+        margin: 0;
+        width: 100%;
+        display: inline-block;
+        padding-top: 7px;
+    }
+
+    .ventajas .listado-ventajas ul {
+        list-style: none;
+        display: block;
+    }
+
+    .recibir-prestamo .app li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 27px;
+    }
+
+    .recibir-prestamo .app li:last-child {
+        margin-bottom: 0px;
+    }
+
+    .recibir-prestamo .com li {
+        margin-bottom: 27px;
+    }
+
+    .ventajas .listado-ventajas ul li {
+        text-align: center;
+        display: block;
+        margin: 0 0 10px;
+    }
+
+    .ventajas .listado-ventajas ul li .lazyImg {
+        width: 100%;
+        max-width: 59px;
+        margin: 0 0 12px;
+    }
+
+    .ventajas .listado-ventajas ul li .img-celular {
+        max-width: 34px;
+    }
+
+    .ventajas .listado-ventajas ul li .text-description {
+        font-size: 14px;
+        margin: auto auto 20px auto;
+        width: 250px;
+    }
+
+    .recibir-prestamo .subtitle {
+        grid-column: 1 / span 3;
+    }
+
+    .recibir-prestamo p.com {
+        text-align: left;
+        color: #016db6;
+        font-weight: bold;
+        margin: 0 0 25px;
+        font-size: 20px;
+    }
+
+    .recibir-prestamo p.com span {
+        display: inline-block;
+        width: 4px;
+        height: 30px;
+        background-color: #ffe143;
+        margin-right: 15px;
+        vertical-align: middle;
+    }
+
+    .recibir-prestamo .card.requisitos-wrap {
+        width: 100vw;
+        padding: 20px;
+    }
+
+    .recibir-prestamo .card.requisitos-wrap:last-child {
+        margin-right: 0px;
+    }
+
+    .recibir-prestamo .requisitos-wrap.app {
+        margin: 12px auto 0;
+    }
+
+    .recibir-prestamo .card .img-mask {
+        color: #016db6;
+        font-weight: bold;
+        width: 7%;
+        display: inline-block;
+        font-size: 20px
+    }
+
+    .btn-iniciar-sesion {
+        display: block;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-left {
+        text-align: left;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .rowContainer {
+        margin: 0;
+        padding: 0;
+    }
+
+    #footer {
+        display: none;
+    }
+
+    .reveal {
+        width: 100%;
+        background: #192c39;
+        grid-area: footer;
+        margin: 50px 0 0;
+    }
+
+    .footer-local {
+        background: #00253D;
+        color: #fff;
+        clear: both;
+        font-size: 14px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .footer-local .list {
+        margin: 0 auto 20px;
+        text-align: center;
+        display: inline-block;
+        list-style: none;
+    }
+
+    .footer-local .list-element {
+        list-style: none;
+        margin: 0 10px;
+        padding-top: 12px;
+    }
+
+    .footer-local .text {
+        color: #fff;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .footer-local-link {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .footer-local-link:hover {
+        text-decoration: underline;
+        outline: none;
+    }
+
+    .main-banner-msg-container-desk {
+        display: none;
+    }
+
+    .youtube-embed-facade {
+        background-image:
+            url("http://i3.ytimg.com/vi/f9RkpPo3v9M/hqdefault.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
+        height: 350px;
+        width: 80%;
+        display: block;
+        position: relative;
+    }
+
+    .youtube-embed-facade .play-button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 68px;
+        height: 48px;
+        margin-left: -34px;
+        margin-top: -24px;
+        -webkit-transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+        transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+        z-index: 63;
+    }
+
+    .btn-quiero-prueba {
+        text-transform: inherit;
+        background-color: #fff !important;
+        color: #007dc3 !important;
+        padding: 12px 65px !important;
+        min-width: 270px;
+        display: block;
+        max-width: 300px;
+        margin: 20px auto !important;
+        font-size: 16px;
+    }
+
+    .img-descarga {
+        width: 140px;
+        height: 47px;
+    }
+
+    .reqPrinc ul li .text-description .br {
+        display: none;
+    }
+
+    .ventajas .listado-ventajas ul li .text-description .br {
+        display: none;
+    }
+
+    .recibir-prestamo .app .requisitos-mas-info a:first-child {
+        padding-right: 26px;
+    }
+
+    @media only screen and (min-width: 400px) {
+        .header-local-item {
+            width: 41%;
+        }
+
+        .reqPrinc ul li .img-mask img {
+            display: block;
+            margin: auto;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .wrapper {
+            padding: 0 15px;
+        }
+
+        .card.reqPrinc {
+            display: block;
+        }
+
+        .requisitos-mas-info a.btn-primary {
+            width: 100%;
+            display: block;
+            margin: 27px auto;
+        }
+
+        .recibir-prestamo .card.requisitos-wrap:last-child {
+            margin-right: 0px;
+            margin-left: 25px;
+        }
+
+        .reqPrinc ul li {
+            height: auto;
+            display: block;
+            width: 100%;
+        }
+
+        .reqPrinc ul li .img-mask {
+            display: block;
+            position: relative;
+        }
+
+        .reqPrinc ul li .img-mask:first-child {
+            padding-top: 10px;
+            padding-left: 20px;
+        }
+
+        .reqPrinc ul li .img-mask img {
+            display: block;
+            margin: auto;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
+
+        .reqPrinc ul li .img-mask .icono_llave,
+        .reqPrinc ul li .img-mask .icono_calendario {
+            width: 65px;
+        }
+
+        .reqPrinc ul li .img-mask .icono_arroba {
+            width: 45px;
+        }
+
+        .reqPrinc ul li .img-mask .icono_tarjeta {
+            width: 69px;
+        }
+
+        .reqPrinc ul li .img-mask .icono_usuario {
+            width: 54px;
+        }
+
+        .reqPrinc ul li .text-description {
+            grid-column: 1;
+            grid-row: 2;
+            text-align: center;
+        }
+
+        .ventajas {
+            grid-template: 20% 80% / 5% 90% 5%;
+        }
+
+        .ventajas .listado-ventajas ul {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .ventajas .listado-ventajas ul li {
+            width: 33.33%;
+        }
+
+        .recibir-prestamo {
+            grid-template: 7% 42% 2% 53% / 20px 1fr 20px 1fr 20px;
+        }
+
+        .recibir-prestamo .card.requisitos-wrap {
+            width: calc(49% - 40px);
+            display: inline-block;
+            margin: 0 15px;
+            vertical-align: top;
+        }
+
+        .recibir-prestamo .com .requisitos-mas-info {
+            margin-bottom: 0px;
+        }
+
+        .recibir-prestamo li div {
+            margin: 0;
+        }
+
+        .logo-whatsapp-container {
+            display: flex;
+            width: 20%;
+        }
+
+        .text-whatsapp-container {
+            display: inline-block;
+            width: 79%;
+        }
+
+        .whatsapp .text {
+            text-align: center;
+            margin-left: 0;
+        }
+
+        .recibir-prestamo .requisitos-wrap.app {
+            grid-row: 2 / span 3;
+            grid-column: 4 / 4;
+        }
+
+        .recibir-prestamo .requisitos-mas-info a {
+            display: inline-block;
+        }
+
+        .recibir-prestamo .app .requisitos-mas-info a:first-child {
+            padding-right: 30px;
+        }
+
+        .whatsapp {
+            width: 95%;
+        }
+
+        .whatsapp .divBoton {
+            display: block;
+            margin: 0 40px;
+        }
+
+        .whatsapp .btn-primary {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .horarios p {
+            width: 40%;
+            display: block;
+            margin: auto;
+            font-size: 14px;
+        }
+
+        .ventajas .listado-ventajas ul li .lazyImg {
+            margin: 10px 0 20px;
+            width: 100%;
+        }
+
+        .ventajas .listado-ventajas ul li .text-description {
+            margin: 0;
+            width: 100%;
+            padding: 0 30px;
+        }
+
+        .header-local-item {
+            text-align: right;
+        }
+
+        .whatsapp .subtitle {
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .whatsapp .text {
+            text-align: left;
+        }
+
+        #divBoton {
+            width: 30%;
+            margin: 10px 0 0;
+        }
+
+        .recibir-prestamo .card .img-mask {
+            color: #016db6;
+            font-weight: bold;
+            width: 4%;
+            display: inline-block;
+        }
+
+        .recibir-prestamo .app .requisitos-mas-info a:first-child {
+            padding-right: 33px;
+        }
+
+        .img-descarga {
+            width: 155px;
+            height: 50px;
+        }
+
+        .recibir-prestamo .card.requisitos-wrap {
+            width: 100vw;
+            padding-left: 20px;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        .reveal {
+            min-height: 100px;
+        }
+
+        .footer-local .list-element {
+            display: inline-block;
+            width: auto;
+        }
+
+        .btn-quiero-prueba {
+            max-width: initial;
+        }
+
+        .recibir-prestamo .card .img-mask {
+            color: #016db6;
+            font-weight: bold;
+            width: 5%;
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        /*.recibir-prestamo .app .requisitos-mas-info a:first-child {
+    padding-right: 10px;
+    }*/
+        .whatsapp .text {
+            font-size: 16px;
+            margin-right: 0;
+            text-align: left;
+            line-height: 24px;
+            font-weight: 400;
+            margin-left: 16px;
+            width: 250px;
+        }
+
+        .recibir-prestamo .card.requisitos-wrap {
+            width: 100vw;
+            padding-left: 46px;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .card.reqPrinc ul {
+            display: flex;
+        }
+
+        .reqPrinc ul li {
+            width: 25%;
+        }
+
+        .reqPrinc ul li .text-description a {
+            margin: 0;
+            display: inline-block;
+        }
+
+        .requisitos-mas-info a.btn-primary {
+            width: 300px;
+        }
+
+        .reqPrinc ul li .text-description .br {
+            display: block;
+        }
+
+        .ventajas .listado-ventajas ul li .text-description .br {
+            display: block;
+        }
+
+        #divBoton {
+            width: 30%;
+            margin: 10px 0 12px;
+        }
+
+        .whatsapp {
+            padding: 0 20px 20px;
+        }
+
+        .logo-whatsapp-container {
+            display: flex;
+            width: 20%;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 0 0;
+        }
+
+        .whatsapp .text {
+            margin: 0 0 15px;
+            width: 85%;
+            font-size: 17px;
+            text-align: left;
+        }
+
+        .subtitle {
+            font-size: 20px;
+        }
+
+        .whatsapp .subtitle {
+            width: 50%;
+            margin: 24px 0;
+        }
+
+        .youtube-embed-facade,
+        .youtube {
+            width: 60%;
+            height: 500px;
+        }
+
+        .whatsapp .text {
+            font-size: 16px;
+            margin-right: 0;
+            margin-left: 0;
+            width: 76%;
+        }
+
+        .recibir-prestamo li div,
+        .recibir-prestamo .app li {
+            align-items: flex-end;
+        }
+
+        .recibir-prestamo .card .text-description {
+            padding-top: 0px;
+        }
+    }
+
+    @media screen and (min-width: 1080px) {
+        .col-full {
+            width: 100%;
+        }
+
+        .main-banner-img-container {
+            min-height: 300px;
+        }
+
+        .main-banner-img-container img {
+            width: 350px;
+            height: 400px;
+        }
+
+        .main-banner {
+            display: flex;
+            flex-flow: row-reverse;
+            justify-content: center;
+        }
+
+        .main-banner-msg {
+            height: 100%;
+            width: auto;
+            align-self: center;
+            padding: 0 15px;
+        }
+
+        .main-banner-primary-text,
+        .main-banner-secondary-text {
+            display: none;
+        }
+
+        .main-banner-primary-text-desk-container {
+            display: block;
+            line-height: 1;
+        }
+
+        .main-banner-primary-text-desk {
+            background: #ffe143;
+            color: #006cba;
+            font-size: 33px;
+            font-weight: bold;
+            text-align: center;
+            font-family: "Circular", sans-serif;
+        }
+
+        .main-banner-msg-container-desk {
+            width: 100%;
+            height: 100%;
+            display: block;
+            padding: 0 15px;
+        }
+
+        .main-banner-secondary-text-desk {
+            width: 100%;
+            color: white;
+            font-family: "Roboto", sans-serif;
+            font-size: 32px;
+            text-align: left;
+            line-height: 40px;
+            text-shadow: 0 1px 0 rgb(20 20 30 / 10%);
+            margin: 15px 0 0 15px;
+        }
+
+        .ventajas .listado-ventajas ul li .lazyImg {
+            grid-column: 2;
+            grid-row: 1;
+            width: 100%;
+            margin: 10px 0 20px;
+            max-width: 80px;
+            height: 62px;
+        }
+
+        .listado-ventajas {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        .ventajas .listado-ventajas ul li {
+            display: block;
+        }
+
+        .recibir-prestamo .card.requisitos-wrap {
+            width: calc(50% - 37px);
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 30px;
+        }
+
+        .recibir-prestamo {
+            display: block;
+            max-width: 1170px;
+            margin: 32px auto 0;
+        }
+
+        .whatsapp {
+            max-width: 1140px;
+            margin: 0 auto;
+            width: 1140px;
+        }
+
+        .youtube {
+            width: 60%;
+            height: 500px;
+        }
+
+        .requisitos-mas-info a.btn-primary {
+            width: 300px;
+        }
+
+        .ajust-safari-height {
+            height: auto;
+            max-height: 400px;
+            padding: 0 15px;
+            margin-left: -13.5%;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .footer {
+            padding: 20px 0 !important;
+        }
+    }
+
+    @media only screen and (min-width: 1300px) {
+        .footer-local .list-element {
+            margin: 0 25px;
+        }
+    }
+</style>
+<link rel="preload" as="image" href="https://cdn1.coppel.com/wcsstore/AuroraStorefrontAssetStore/emark
+    eting/landings/Prestamos/img/Coppel_Master_Negocio_Landing.png" />
+<div class="container-local">
+    <style>
+        .pushNotificationsPermission {
+            position: fixed;
+            z-index: 100;
+            background-color: #ffffff;
+            padding: 20px 15px;
+            text-align: center;
+            bottom: 60px;
+            width: 90%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 25px #969696;
+        }
+
+        .closeMshPush {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 40px;
+            width: 40px;
+            background-color: transparent;
+            border: none;
+        }
+
+        .closeMshPush i {
+            color: #aaa;
+        }
+
+        .img-push {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .img-push i {
+            color: #016db6;
+        }
+
+        .pushNotificationsPermission .titulo {
+            margin-bottom: 5px;
+            font-size: 20px;
+            font-family: 'Circular', 'Roboto';
+        }
+
+        .pushNotificationsPermission .text,
+        .pushNotificationsPermission ul li {
+            color: #68686A;
+        }
+
+        .botonesPush {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .botonesPush .btn {
+            margin: auto;
+        }
+
+        .botonesPush .btn-primary {
+            order: 2;
+            width: 160px;
+            height: 38px;
+        }
+
+        .botonesPush .btn-cancelar {
+            background: transparent;
+            border: none;
+            color: #5B676A;
+        }
+
+        @media screen and (min-width: 768px) {
+            .pushNotificationsPermission {
+                position: relative;
+                width: 100%;
+                background-color: #121212;
+                border-radius: 0;
+                box-shadow: none;
+                padding: 12px 10px;
+                bottom: inherit;
+            }
+
+            .pushNotificationsPermission .hidden-xs {
+                display: inline-block;
+                padding: 0 20px;
+                color: #fff;
+            }
+
+            .pushNotificationsPermission .titulo,
+            .closeMshPush,
+            .pushNotificationsPermission ul {
+                display: none;
+            }
+
+            .img-push {
+                display: inline-block;
+            }
+
+            .img-push i {
+                color: #FFEE93;
+            }
+
+            .botonesPush {
+                display: inline-flex;
+                margin-top: 0;
+            }
+
+            .botonesPush .btn {
+                margin: initial;
+            }
+
+            .botonesPush .btn-primary {
+                order: initial;
+                width: 140px;
+            }
+
+            .botonesPush .btn-cancelar {
+                color: #ffffff;
+                text-decoration: underline;
+            }
+        }
+
+        @media only screen and (min-width:992px) {
+            .pushNotificationsPermission .text {
+                padding-right: 32px;
+            }
+        }
+    </style>
+    <div class="pushNotificationsInOpt" style="display:none; ">
+        <div class="pushNotificationsPermission"> <button onclick="closePushNotification()" class="closeMshPush"
+                id="closeMshPush" aria-label="Cerrar"> <i class="fa
+    fa-times"></i> </button>
+            <div class="img-push"> <i class="fa fa-comment" aria-hidden="true"></i> </div>
+            <p class="titulo">Activa las notificaciones</p>
+            <p class="text hidden-xs"> Para recibir ofertas, promociones y
+                novedades exclusivas activa las notificaciones.
+            </p>
+            <p class="text visible-xs"> Para recibir antes que nadie: </p>
+            <ul>
+                <li>- Ofertas exclusivas</li>
+                <li>- Promociones especiales</li>
+                <li>- Nuevos lanzamientos</li>
+            </ul>
+            <div class="botonesPush"> <button class="btn btn-primary" type="button" onclick="acceptPushNotification()"
+                    id="pushAccept">Activar</button> <button class="btn
+    btn-cancelar" type="button" onclick="rejectPushNotification()" id="pushCancel">Más
+                    tarde</button> </div>
+        </div>
+    </div>
+    <h1 class="hidden">Solicitar un préstamo personal en Coppel</h1>
+    <div class="header-local rellax">
+        <div class="pd-sides-15 wrapper">
+            <a href="/" class="header-local-item">
+                <img src="/wcsstore/CoppelStoreFrontAssetStore/images/logo.svg" class="logo-coppel pull-left"
+                    alt="Logo de Coppel.com" />
+            </a>
+            <a href="/" class="header-local-item">Regresar</a>
+        </div>
+    </div>
+    <div class="main-banner">
+        <div class="main-banner-msg">
+            <span class="main-banner-primary-text">Préstamo Personal
+                <span>Coppel</span>
+            </span>
+            <p class="main-banner-secondary-text">
+                Inicia tu negocio:
+                <br />
+                <strong>está en tus manos</strong>
+                <a data-nd1="Solicita tu préstamo" data-nd2="Quiero mi préstamo" data-nd3="" data-nd4=""
+                    data-evento="clicGeneral" id="landingPrestamoQuiero" onclick="Javascript:CoppelLoanJS.iWantLoan();"
+                    class="btn btn-primary btn-quiero-prueba">Quiero mi préstamo</a>
+            </p>
+            <div class="main-banner-msg-container-desk">
+                <div class="main-banner-primary-text-desk-container">
+                    <div class="col-full">
+                        <span class="main-banner-primary-text-desk">Préstamo
+                            Personal</span>
+                    </div>
+                    <div class="col-full">
+                        <span class="main-banner-primary-text-desk">Coppel</span>
+                    </div>
+                </div>
+                <p class="main-banner-secondary-text-desk">
+                    Inicia tu negocio:
+                    <br />
+                    <strong>está en tus manos</strong>
+                    <a data-nd1="Solicita tu préstamo" data-nd2="Quiero mi préstamo" data-nd3="" data-nd4=""
+                        data-evento="clicGeneral" id="landingPrestamoQuiero"
+                        onclick="Javascript:CoppelLoanJS.iWantLoan();" class="btn btn-primary btn-quiero-prueba">Quiero
+                        mi préstamo</a>
+                </p>
+            </div>
+        </div>
+        <div class="main-banner-img-container">
+            <img class="lazyImg" src="https://cdn1.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="https://cdn1.coppel.com/wcsstore/AuroraStorefrontAssetSt
+    ore/emarketing/landings/Prestamos/img/Coppel_Master_Negocio_Landing.png
+    " alt="Modelo masculino mostrando una carreta de pan. Préstamo
+    Personal Coppel. Iniciar tu negocio está en tus manos. Pídelo en tienda
+    o desde App Coppel y Coppel.com. Pulsa aquí para solicitar tu
+    préstamo." />
+        </div>
+    </div>
+    <!-- /.main-banner -->
+    <div class="requisitos">
+        <div class="wrapper">
+            <h3 class="subtitle">¿Qué necesitas para recibir tu préstamo?</h3>
+            <div class="card reqPrinc">
+                <ul>
+                    <li>
+                        <div class="img-mask">
+                            <img src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetSt
+    ore/emarketing/landings/Prestamos/img/requisitos/llave.svg" alt="Icono de Llave" class="lazyImg icono_llave" />
+                        </div>
+                        <p class="text-description">
+                            Contar con 6 meses usando tu Crédito Coppel
+                            <br />
+                            <a class="solicita_enlace" href="/requisitos-para-obtener-credito">Solicita tu Crédito
+                                Coppel</a>
+                        </p>
+                    </li>
+                    <li>
+                        <div class="img-mask">
+                            <img src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetSt
+    ore/emarketing/landings/Prestamos/img/requisitos/arroba.svg" alt="Icono de arroba" class="lazyImg icono_arroba" />
+                        </div>
+                        <p class="text-description">
+                            <span>Vincular tu cuenta <br class="br"> Coppel.com con tu
+                                crédito</span>
+                            <br />
+                            <a class="solicita_enlace" href="/UserRegistrationForm?myAcctMain=1&catalogId=[catalogId]&register
+    New=Y&langId=-5&storeId=[storeId]">Crea tu cuenta</a>
+                        </p>
+                    </li>
+                    <li>
+                        <div class="img-mask">
+                            <img src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetSt
+    ore/emarketing/landings/Prestamos/img/requisitos/calendario.svg" alt="Icono Calendario"
+                                class="lazyImg icono_calendario" />
+                        </div>
+                        <p class="text-description">
+                            Tener un historial sano en <br class="br">compras y abonos
+                        </p>
+                    </li>
+                    <li>
+                        <div class="img-mask">
+                            <img src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetSt
+    ore/emarketing/landings/Prestamos/img/requisitos/tarjeta.svg" alt="Icono de tarjeta"
+                                class="lazyImg icono_tarjeta" />
+                        </div>
+                        <p class="text-description">
+                            Elegir tu Tarjeta de Débito <br>BanCoppel para recibir tu
+                            depósito <br>
+                            <a class="solicita_enlace_tarjeta" href="#" data-nd1="¿Qué
+    necesitas para recibir tu préstamo?" data-nd2="Si no la tienes,
+    tramítala" onclick="Javascript:CoppelLoanJS.openLink();">Si no la
+                                tienes, tramítala</a>
+                        </p>
+                    </li>
+                    <li>
+                        <div class="img-mask">
+                            <img src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetSt
+    ore/emarketing/landings/Prestamos/img/requisitos/usuario.svg" alt="Icono de Usuario"
+                                class="lazyImg last icono_usuario" />
+                        </div>
+                        <p class="text-description">Ser menor de 85 años <br class="br">de edad</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.requisitios -->
+    <div class="ventajas">
+        <div class="preguntas-frecuentes-ventajas">
+            <h3 class="subtitle full-width">¿Qué tenemos para ti?</h3>
+        </div>
+        <div class="pd-sides-15 wrapper">
+            <div class="card listado-ventajas">
+                <ul>
+                    <li class="ventajasIcon">
+                        <img src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetSt
+    ore/emarketing/prestamo-app/hand.svg" alt="Icono de Mano" class="lazyImg main-message-01 slow infinite" />
+                        <p class="text-description">
+                            Te prestamos hasta $40,000 <br>en efectivo
+                        </p>
+                    </li>
+                    <li class="ventajasIcon">
+                        <img src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetSt
+    ore/emarketing/prestamo-app/calendar.svg" alt="Icono de calendario"
+                            class="lazyImg main-message-02 slow infinite" />
+                        <p class="text-description">Plazos de 12, 18 o 24 <br>meses
+                            para pagar</p>
+                    </li>
+                    <li class="ventajasIcon">
+                        <img src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetSt
+    ore/emarketing/prestamo-app/smartphone.svg" alt="Icono de smartphone"
+                            class="lazyImg main-message-03 img-celular slow infinite" />
+                        <p class="text-description">
+                            Facilidad para abonar en Coppel.com, App <br class="br">Coppel, WhatsApp, tienda Coppel,
+                            Cajero Automático
+                            BanCoppel, Telecomm y OXXO
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.ventajas -->
+    <div class="recibir-prestamo" id="recibir-prestamo">
+        <h3 class="subtitle full-width" id="pasos_landing_prestamo">
+            Pasos para recibir un préstamo
+        </h3>
+        <div class="card requisitos-wrap com" itemscope itemtype="https://schema.org/HowTo">
+            <p class="com" itemprop="name" content="Obtener un prestamo
+    Coppel">
+                <span class="amarillo"></span>Coppel.com
+            </p>
+            <div itemprop="supply" itemscope itemtype="https://schema.org/HowToSupply">
+                <link itemprop="name" content="Invirtiendo menos de 30 minutos" />
+            </div>
+            <link itemprop="tool" content="Ingresando a Coppel.com" />
+            <link itemprop="description" content="Descubre cómo obtener un prestamo en Coppel desde su
+    sitio web: Coppel.com" />
+            <link itemprop="totalTime" content="PT30M" />
+            <ul itemprop="step" itemscope itemtype="https://schema.org/HowToSection">
+                <link itemprop="name" content="Pasos para recibir un prestamo desde Coppel.com" />
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
+                    <link itemprop="position" content="1" />
+                    <link itemprop="image" content="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/em
+    arketing/landings/Prestamos/img/Coppel_Master_Negocio_Landing.png" />
+                    <link itemprop="url" content="https://www.coppel.com/solicitar-prestamo-personal" />
+                    <link itemprop="name" content="Pasos para obtener el prestamo desde la página
+    Coppel.com" />
+                    <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
+                        <link itemprop="image" content="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/em
+    arketing/landings/Prestamos/img/Coppel_Master_Negocio_Landing.png" />
+                        <link itemprop="url" content="https://www.coppel.com/solicitar-prestamo-personal" />
+                        <link itemprop="name" content="Paso 1" />
+                        <div itemprop="position" class="img-mask">1</div>
+                        <p itemprop="text" class="text-description">
+                            Inicia sesión en Coppel.com
+                        </p>
+                    </div>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
+                    <link itemprop="image" content="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/em
+    arketing/landings/Prestamos/img/Coppel_Master_Negocio_Landing.png" />
+                    <link itemprop="url" content="https://www.coppel.com/solicitar-prestamo-personal" />
+                    <div>
+                        <link itemprop="name" content="Paso 2" />
+                        <div itemprop="position" class="img-mask">2</div>
+                        <p itemprop="text" class="text-description">
+                            Te confirmamos si tienes un préstamo autorizado
+                        </p>
+                    </div>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
+                    <link itemprop="image" content="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/em
+    arketing/landings/Prestamos/img/Coppel_Master_Negocio_Landing.png" />
+                    <link itemprop="url" content="https://www.coppel.com/solicitar-prestamo-personal" />
+                    <div>
+                        <link itemprop="name" content="Paso 3" />
+                        <div itemprop="position" class="img-mask">3</div>
+                        <p itemprop="text" class="text-description">Realiza tu
+                            solicitud de préstamo</p>
+                    </div>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
+                    <link itemprop="image" content="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/em
+    arketing/landings/Prestamos/img/Coppel_Master_Negocio_Landing.png" />
+                    <link itemprop="url" content="https://www.coppel.com/solicitar-prestamo-personal" />
+                    <div>
+                        <link itemprop="name" content="Paso 4" />
+                        <div itemprop="position" class="img-mask">4</div>
+                        <p itemprop="text" class="text-description">
+                            Escoge tu monto y plazo para pagar
+                        </p>
+                    </div>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
+                    <link itemprop="image" content="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/em
+    arketing/landings/Prestamos/img/Coppel_Master_Negocio_Landing.png" />
+                    <link itemprop="url" content="https://www.coppel.com/solicitar-prestamo-personal" />
+                    <div>
+                        <link itemprop="name" content="Paso 5" />
+                        <div itemprop="position" class="img-mask">5</div>
+                        <p itemprop="text" class="text-description">
+                            Elige tu Tarjeta de Débito BanCoppel para recibir dinero al
+                            instante
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <span class="requisitos-mas-info">
+                <a href="/wcs/shop/LogonForm?myAcctMain=1&amp;catalogId=[catalogId]&amp;la
+    ngId=-5&amp;storeId=[storeId]" class="btn-primary btn-iniciar-sesion">Iniciar sesión</a>
+            </span>
+        </div>
+        <div class="card requisitos-wrap app">
+            <p class="com"><span class="amarillo"></span>App Coppel</p>
+            <ul>
+                <li>
+                    <div class="img-mask">1</div>
+                    <p class="text-description">
+                        Descarga la App Coppel e inicia sesión
+                    </p>
+                </li>
+                <li>
+                    <div class="img-mask">2</div>
+                    <p class="text-description">
+                        Entra a la opción de préstamos desde el menú o estado de
+                        cuenta
+                    </p>
+                </li>
+                <li>
+                    <div class="img-mask">3</div>
+                    <p class="text-description">
+                        Te confirmamos si tienes un préstamo autorizado
+                    </p>
+                </li>
+                <li>
+                    <div class="img-mask">4</div>
+                    <p class="text-description">Solicita tu préstamo</p>
+                </li>
+                <li>
+                    <div class="img-mask">5</div>
+                    <p class="text-description">Escoge el monto y plazos a
+                        pagar</p>
+                </li>
+                <li>
+                    <div class="img-mask">6</div>
+                    <p class="text-description">
+                        Elige tu Tarjeta de Débito BanCoppel para recibir dinero al
+                        instante
+                    </p>
+                </li>
+            </ul>
+            <span class="requisitos-mas-info">
+                <a href="https://play.google.com/store/apps/details?id=com.coppel.coppelap
+    p">
+                    <img class="lazyImg img-descarga" src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="/wcsstore/CoppelStoreFrontAssetStore/emarketing/homepage
+    /google_play_prestamos.png" alt="Logo Google Play" />
+                </a>
+                <a href="https://itunes.apple.com/app/id1267382794">
+                    <img class="lazyImg img-descarga" src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="/wcsstore/CoppelStoreFrontAssetStore/emarketing/homepage
+    /app_store_prestamos.png" alt="Logo App Store" />
+                </a>
+            </span>
+        </div>
+    </div>
+    <!-- /.recibir-prestamo -->
+    <div class="card whatsapp">
+        <div class="logo-whatsapp-container">
+            <img id="logo_whatsapp" class="lazyImg" src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarke
+    ting/ux/preloader.gif" data-original="https://cdn1.coppel.com/wcsstore/AuroraStorefrontAssetSt
+    ore/emarketing/landings/Prestamos/img/logo_whatsapp_landings.svg" alt="Logo de whatsapp" />
+        </div>
+        <div class="text-whatsapp-container">
+            <h3 class="subtitle">¡Préstamos por WhatsApp!</h3>
+            <p class="text">
+                Ahora pedir un préstamo es tan fácil como mandar un WhatsApp.
+                ¡Escríbenos y pídelo, no te dejamos en visto!
+            </p>
+            <div class="whatsapp-pedir-prestamo" id="divBoton">
+                <a href="https://api.whatsapp.com/send?phone=5218002207735&amp;text=¡Hola!
+    " target="_blank" class="btn-primary">Ir a WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <!-- /.whatsapp -->
+    <span class="horarios">
+        <p>
+            * Horario de atención de 4:00 a 23:00 hrs. (hora de la Ciudad de
+            México)
+        </p>
+    </span>
+    <!-- /.horarios -->
+    <div class="reveal">
+        <div class="footer-local">
+            <ul class="list">
+                <li class="list-element">
+                    <a class="footer-local-link" href="/aviso-de-privacidad">Aviso de privacidad</a>
+                </li>
+                <li class="list-element">
+                    <a class="footer-local-link" href="/terminos-y-condiciones">Términos y condiciones</a>
+                </li>
+                <li class="list-element">
+                    <a class="footer-local-link" href="/compra-segura">Seguridad en Coppel.com</a>
+                </li>
+                <li class="list-element">
+                    <a class="footer-local-link" href="/mapa-del-sitio">Mapa del sitio
+                    </a>
+                </li>
+                <li class="list-element">
+                    <a class="footer-local-link" href="/wcs/shop/coppel/preguntas-frecuentes">Preguntas frecuentes
+                    </a>
+                </li>
+                <li class="list-element">
+                    <a class="footer-local-link" href="https://www.coppel.com.ar/">Coppel Argentina
+                    </a>
+                </li>
+                <li class="list-element">
+                    <a class="footer-local-link" href="https://www.hearcolors.com.mx/SelloAccesibilidad.php?num_clte=FA3
+    0D267">Declaración de accesibilidad</a>
+                </li>
+            </ul>
+            <p class="text">2022 © Coppel todos los derechos reservados</p>
+        </div>
+    </div>
+</div>
+<div id="avisoModalLandingPrestamo" class="modal">
+    <div class="modal-dialog modal-sm" id="avisoLandingPrestamo">
+        <div class="modal-content">
+            <div class="modal-body">
+                <style type="text/css">
+                    .link {
+                        text-decoration: none !important;
+                    }
+
+                    .botonera .btn1.accept {
+                        font-size: 1em;
+                        font-weight: 100;
+                    }
+
+                    .parrafo {
+                        font-size: 16px;
+                    }
+
+                    .title {
+                        font-size: 19px;
+                        margin-bottom: 15px;
+                    }
+
+                    .telefono {
+                        color: black;
+                    }
+
+                    .img-aviso {
+                        max-width: 96px;
+                        margin: 25px 0 25px 0;
+                        width: 30%;
+                    }
+
+                    .botonera {
+                        padding: 0 30px !important;
+                    }
+
+                    .btn-entendido {
+                        margin: 20px 0;
+                    }
+                </style>
+                <div class="row text-center">
+                    <div class="col-xs-12">
+                        <img src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/advertencia.svg
+    " class="rounded img-aviso" alt="" draggable="false" />
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-xs-12">
+                        <p class="title text-center">
+                            No puedes recibir un préstamo, lo sentimos
+                        </p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-xs-12">
+                        <p class="parrafo">
+                            Te faltan algunos requisitos para aprovechar este
+                            beneficio.
+                            Llámanos al
+                            <b>
+                                <a href="tel:8002007735" class="telefono">800-220-7735</a>
+                            </b>
+                            <br />para decirte cuáles y ayudarte.
+                        </p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-xs-12 botonera">
+                        <button type="button" class="btn btn-primary btn-block btn-entendido" data-dismiss="modal">
+                            Entendido
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL PRESTAMOS -->
+<div class="modal fade" id="modalAlertPrestamo" tabindex="-1" role="dialog" aria-labelledby="modalAlertLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="document.getElementById('modalAlertPrestamo').style.display =
+    'none'"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalAlertLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <style type="text/css">
+                    #PPModalAutorizado .botonera {
+                        padding: 0px !important;
+                    }
+                </style>
+                <div class="modalInfoPP nodisplay">
+                    <div id="PPModalAutorizado" class="bloque-prestamo">
+                        <div class="text-center">
+                            <img src="/wcsstore/CoppelStoreFrontAssetStore/images/abonos/advertencia.png
+    " style="max-width: 96px; margin: 15px 0 12px 45px; width: 30%" alt="">
+                        </div>
+                        <h3 class="title-xs sin-tarjeta" style="width:
+    95%;">¡[NOMBRE], tienes un préstamo autorizado de hasta
+                            [PRESTAMO]!</h3>
+                        <p class="parrafo-xs sin-tarjeta">Para obtenerlo solicita una
+                            Tarjeta de Débito BanCoppel. Tramítala en tu App BanCoppel.</p>
+                        <p class="parrafo-xs sin-tarjeta last">Necesitas: </p>
+                        <ul class="parrafo-xs sin-tarjeta">
+                            <li>· Tener a la mano tu INE/IFE vigente</li>
+                            <li style="width: 95%;">· Regresar aquí para continuar con
+                                tu préstamo</li>
+                        </ul>
+                        <div class="botonera botoneraLanding">
+                            <a href="#" id="descargar_app" class="btn1 accept
+    prestamoObtener sin-tarjeta" data-nd3="Tramitar Tarjeta Débito
+    BanCoppel" onclick="Javascript:CoppelLoanJS.openLink();">Tramitar
+                                Tarjeta Débito BanCoppel</a>
+                            <a href="/ubicacion-de-tiendas-coppel" id="acudir_tienda"
+                                data-nd3="Acudir a tienda a tramitarla" class="close link text-center
+    masTarde sin-tarjeta" data-dismiss="modal">Acudir a tienda a
+                                tramitarla</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadCndImgages();
+        ajustBannerOnSafari();
+    });
+    const ajustBannerOnSafari = function () {
+        const userAgent = window.navigator.userAgent;
+        if (userAgent.includes("Safari")) {
+            const banner =
+                document.querySelector(".main-banner-img-container");
+            banner.classList.add("ajust-safari-height");
+        }
+    };
+    const loadCndImgages = function () {
+        const imgs = document.getElementsByClassName("lazyImg");
+        for (const img of imgs) {
+            img.addEventListener("error", function () {
+                const src = this.getAttribute("src");
+                const idx = src.indexOf("cdn");
+                let retry = this.getAttribute("retry");
+                if (retry == null) {
+                    this.setAttribute("retry", 0);
+                    retry = 0;
+                }
+                if (idx != -1) {
+                    let cdn = src.substr(idx + 3, 1);
+                    if (!isNaN(cdn)) {
+                        cdn = parseInt(cdn) + 1;
+                    }
+                    console.log("src", src);
+                    console.log("idx", idx);
+                    console.log("src.substr(0, idx)", src.substr(0, idx));
+                    console.log("cdn", cdn);
+                    console.log("src.substr(idx+4)", src.substr(idx + 4));
+                    const newSrc = src.substr(0, idx) + "cdn" + cdn +
+                        src.substr(idx + 4);
+                    console.log("src", newSrc);
+                }
+                if (retry <= 5) {
+                    self = this;
+                    setTimeout(function () {
+                        self.setAttribute("src", src);
+                        retry++;
+                        self.setAttribute("retry", retry);
+                    }, 1000);
+                }
+            });
+        }
+    };
+    const createNewNode = function (elementCreatorObject) {
+        const el = document.createElement(elementCreatorObject.name);
+        for (const index in elementCreatorObject.attrs) {
+            console.log(index, elementCreatorObject.attrs[index]);
+            if (index === "class") {
+                el.classList.add(elementCreatorObject.attrs[index]);
+            } else {
+                el[index] = elementCreatorObject.attrs[index];
+            }
+        }
+        return el;
+    };
+</script>
+<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-messaging.js"></script>
+<script>
+    var messaging;
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBgDW1KTrEeS8mdFgNpWfiZhCpZhGs45lU",
+        authDomain: "app-coppel.firebaseapp.com",
+        databaseURL: "https://app-coppel.firebaseio.com",
+        projectId: "app-coppel",
+        storageBucket: "app-coppel.appspot.com",
+        messagingSenderId: "692777122126",
+        appId: "1:692777122126:web:feba06cf0308d645a0861f",
+        measurementId: "G-RM000QBBJG"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    /* Validar si está disponible la librería de firebase */
+    if (typeof firebase != 'undefined') {
+        console.log('const messaging = firebase.messaging();');
+        messaging = firebase.messaging();
+        messaging.usePublicVapidKey(appPublicKey);
+    }
+    $(document).ready(function () {
+        CoppelLoanJS.presShowModalLanding();
+    });
+</script>
