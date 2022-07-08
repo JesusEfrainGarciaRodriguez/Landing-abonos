@@ -1210,11 +1210,11 @@
     <h1 class="hidden">Solicitar un préstamo personal en Coppel</h1>
     <div class="header-local rellax">
         <div class="pd-sides-15 wrapper">
-            <a href="/" class="header-local-item">
+            <a href="/" class="header-local-item" onclick="tagHeader('logo')">
                 <img src="/wcsstore/CoppelStoreFrontAssetStore/images/logo.svg" class="logo-coppel pull-left"
                     alt="Logo de Coppel.com" />
             </a>
-            <a href="/" class="header-local-item">Regresar</a>
+            <a href="/" class="header-local-item" onclick="tagHeader('regresar')">Volver a Coppel.com</a>
         </div>
     </div>
     <div class="main-banner">
@@ -1226,9 +1226,9 @@
                 Inicia tu negocio:
                 <br />
                 <strong>está en tus manos</strong>
-                <a data-nd1="Solicita tu préstamo" data-nd2="Quiero mi préstamo" data-nd3="" data-nd4=""
-                    data-evento="clicGeneral" id="landingPrestamoQuiero" onclick="Javascript:CoppelLoanJS.iWantLoan();"
-                    class="btn btn-primary btn-quiero-prueba">Quiero mi préstamo</a>
+                <a data-nd1="Solicita tu préstamo" data-nd2="Quiero un préstamo" data-nd3="" data-nd4=""
+                    data-evento="clicGeneral" id="landingPrestamoQuiero" onclick="Javascript:CoppelLoanJS.iWantLoan(); tagBloque('bloque_banner','btn_prestamo');"
+                    class="btn btn-primary btn-quiero-prueba">Quiero un préstamo</a>
             </p>
             <div class="main-banner-msg-container-desk">
                 <div class="main-banner-primary-text-desk-container">
@@ -1246,7 +1246,7 @@
                     <strong>está en tus manos</strong>
                     <a data-nd1="Solicita tu préstamo" data-nd2="Quiero mi préstamo" data-nd3="" data-nd4=""
                         data-evento="clicGeneral" id="landingPrestamoQuiero"
-                        onclick="Javascript:CoppelLoanJS.iWantLoan();" class="btn btn-primary btn-quiero-prueba">Quiero
+                        onclick="Javascript:CoppelLoanJS.iWantLoan(); tagBloque('bloque_banner','btn_prestamo');" class="btn btn-primary btn-quiero-prueba">Quiero
                         mi préstamo</a>
                 </p>
             </div>
@@ -1275,7 +1275,9 @@
                         <p class="text-description">
                             Contar con tu crédito Coppel, puedes solicitarlo aquí
                             <br />
-                            <a class="solicita_enlace" href="/requisitos-para-obtener-credito">Solicita tu Crédito Coppel</a>
+                            <a class="solicita_enlace" href="/requisitos-para-obtener-credito" onclick="tagBloque('bloque_necesita','solicita')">
+                                Solicita tu Crédito Coppel
+                            </a>
                         </p>
                     </li>
                     <li>
@@ -1288,7 +1290,9 @@
                             <span>Vincular tu cuenta <br class="br"> Coppel.com con tu
                                 crédito</span>
                             <br />
-                            <a class="solicita_enlace" href="/UserRegistrationForm?myAcctMain=1&catalogId=[catalogId]&registerNew=Y&langId=-5&storeId=[storeId]">Crea tu cuenta</a>
+                            <a class="solicita_enlace" onclick="tagBloque('bloque_necesita','crea')" href="/UserRegistrationForm?myAcctMain=1&catalogId=[catalogId]&registerNew=Y&langId=-5&storeId=[storeId]">
+                                Crea una cuenta
+                            </a>
                         </p>
                     </li>
                     <li>
@@ -1448,7 +1452,7 @@
             </ul>
             <span class="requisitos-mas-info">
                 <a href="/wcs/shop/LogonForm?myAcctMain=1&amp;catalogId=[catalogId]&amp;langId=-5&amp;storeId=[storeId]" 
-                class="btn-primary btn-iniciar-sesion">Iniciar sesión</a>
+                class="btn-primary btn-iniciar-sesion" onclick="tagBloque('bloque_pasos','coppel','iniciar')">Iniciar sesión</a>
             </span>
         </div>
         <div class="card requisitos-wrap app">
@@ -1492,11 +1496,13 @@
             </ul>
             <span class="requisitos-mas-info">
                 <a href="https://play.google.com/store/apps/details?id=com.coppel.coppelapp">
-                    <img class="lazyImg img-descarga" src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarketing/ux/preloader.gif" 
+                    <img class="lazyImg img-descarga" onclick="tagBloque('bloque_pasos','app','play_store')" 
+                    src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarketing/ux/preloader.gif" 
                     data-original="/wcsstore/CoppelStoreFrontAssetStore/emarketing/homepage/google_play_prestamos.png" alt="Logo Google Play" />
                 </a>
                 <a href="https://itunes.apple.com/app/id1267382794">
-                    <img class="lazyImg img-descarga" src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarketing/ux/preloader.gif" 
+                    <img class="lazyImg img-descarga" onclick="tagBloque('bloque_pasos','app','app_store')"
+                    src="https://cdn2.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarketing/ux/preloader.gif" 
                     data-original="/wcsstore/CoppelStoreFrontAssetStore/emarketing/homepage/app_store_prestamos.png" alt="Logo App Store" />
                 </a>
             </span>
@@ -1515,7 +1521,8 @@
                 ¡Escríbenos y pídelo, no te dejamos en visto!
             </p>
             <div class="whatsapp-pedir-prestamo" id="divBoton">
-                <a href="https://api.whatsapp.com/send?phone=5218002207735&amp;text=¡Hola!" target="_blank" class="btn-primary">Ir a WhatsApp</a>
+                <a href="https://api.whatsapp.com/send?phone=5218002207735&amp;text=¡Hola!" onclick="tagBloque('bloque_whatsapp','whatsapp')"
+                target="_blank" class="btn-primary">Ir a WhatsApp</a>
             </div>
         </div>
     </div>
@@ -1769,4 +1776,74 @@
     $(document).ready(function () {
         CoppelLoanJS.presShowModalLanding();
     });
+</script>
+<script type="text/javascript">
+	$(document).ready(function () {
+        dataLayer.push({
+            page: "/landing-solicitar-prestamo-personal",
+            title: "Landing solicitar préstamo personal",
+            event: "pvlandingGeneral",
+        });
+	});
+	function tagHeader(from) {
+        if (from == "logo") {
+            nd2 = "Logo Coppel";
+        } else if (from == "regresar") {
+            nd2 = "Volver a Coppel.com";
+        }
+        dataLayer.push({
+            nd1: "Landing Préstamos",
+            nd2: nd2,
+            nd3: "",
+            nd4: "",
+            event: "clicGeneral",
+        });
+	}
+	function preventPageOut() {
+        window.onbeforeunload = function (e) {
+            return "Texto de aviso";
+        };
+	}
+ 
+	function tagBloque(bloque = "", opcion = "", opcion_ = "") {
+        if (bloque == "bloque_banner") {
+            nd2 = "Prestamo Personal Coppel";
+        } else if (bloque == "bloque_necesita") {
+            nd2 = "¿Qué necesitas para recibir tu préstamo?";
+        } else if (bloque == "bloque_pasos") {
+            nd2 = "Pasos para recibir un préstamo";
+        } else if (bloque == "bloque_whatsapp") {
+            nd2 = "¡Préstamos por WhatsApp!";
+        }
+        if (opcion == "preguntas") {
+            nd3 = "Preguntas frecuentes";
+        } else if (opcion == "btn_prestamo") {
+            nd3 = "Quiero un préstamo";
+        } else if (opcion == "solicita") {
+            nd3 = "Solicita tu crédito Coppel";
+        } else if (opcion == "solicita") {
+            nd3 = "Solicita tu crédito Coppel";
+        } else if (opcion == "crea") {
+            nd3 = "Crea una cuenta";
+        } else if (opcion == "whatsapp") {
+            nd3 = "Pedir préstamo";
+        } else if (opcion == "coppel") {
+            if (opcion_ == "iniciar") {
+                nd3 = "Coppel.com - Iniciar sesión";
+            }
+        } else if (opcion == "app") {
+            if (opcion_ == "play_store") {
+                nd3 = "App Coppel - Disponible en Google Play";
+            } else if (opcion_ == "app_store") {
+                nd3 = "App Coppel - Consíguelo en el App Store";
+            }
+        }
+        dataLayer.push({
+            nd1: "Landing Préstamos",
+            nd2: nd2,
+            nd3: nd3,
+            nd4: "",
+            event: "clicGeneral",
+        });
+	}
 </script>
