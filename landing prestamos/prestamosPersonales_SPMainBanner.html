@@ -1227,7 +1227,7 @@
                 <br />
                 <strong>está en tus manos</strong>
                 <a data-nd1="Solicita tu préstamo" data-nd2="Quiero un préstamo" data-nd3="" data-nd4=""
-                    data-evento="clicGeneral" id="landingPrestamoQuiero" onclick="Javascript:CoppelLoanJS.iWantLoan(); tagBloque('bloque_banner','btn_prestamo');"
+                    data-evento="clicGeneral" id="landingPrestamoQuiero" onclick="Javascript:CoppelLoanJS.iWantLoan();"
                     class="btn btn-primary btn-quiero-prueba">Quiero un préstamo</a>
             </p>
             <div class="main-banner-msg-container-desk">
@@ -1246,7 +1246,7 @@
                     <strong>está en tus manos</strong>
                     <a data-nd1="Solicita tu préstamo" data-nd2="Quiero un préstamo" data-nd3="" data-nd4=""
                         data-evento="clicGeneral" id="landingPrestamoQuiero"
-                        onclick="Javascript:CoppelLoanJS.iWantLoan(); tagBloque('bloque_banner','btn_prestamo');" class="btn btn-primary btn-quiero-prueba">
+                        onclick="Javascript:CoppelLoanJS.iWantLoan();" class="btn btn-primary btn-quiero-prueba">
                         Quiero un préstamo
                     </a>
                 </p>
@@ -1847,4 +1847,14 @@
             event: "clicGeneral",
         });
 	}
+    $('body').on('click', '#landingPrestamoQuiero', function (e) {
+        if(isGuest) {
+            CoppelGTAGPrestamos.selectOptionLanding($(this));
+        }
+    });
+    $('body').on('click', '.solicita_enlace_tarjeta', function (e) {
+        if(isGuest) {
+            CoppelGTAGPrestamos.selectOptionLanding($(this));
+        }
+    });
 </script>
